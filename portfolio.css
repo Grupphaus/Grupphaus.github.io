@@ -1,3 +1,39 @@
+@-webkit-keyframes color_change {
+  0% { color: #2b2920; }
+  25% { color: #9471b1; }
+  50% { color: #efe569; }
+  75% { color: #9b6577; }
+  100% { color: #8eb171; }	
+}
+@-moz-keyframes color-change {
+  0% { color: #2b2920; }
+  25% { color: #9471b1; }
+  50% { color: #efe569; }
+  75% { color: #9b6577; }
+  100% { color: #8eb171; }
+}
+@-ms-keyframes color-change {
+  0% { color: #2b2920; }
+  25% { color: #9471b1; }
+  50% { color: #efe569; }
+  75% { color: #9b6577; }
+  100% { color: #8eb171; }
+}
+@-o-keyframes color-change {
+  0% { color: #2b2920; }
+  25% { color: #9471b1; }
+  50% { color: #efe569; }
+  75% { color: #9b6577; }
+  100% { color: #8eb171; }
+}
+@keyframes color-change {
+  0% { color: #2b2920; }
+  25% { color: #9471b1; }
+  50% { color: #efe569; }
+  75% { color: #9b6577; }
+  100% { color: #8eb171; }	
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -14,14 +50,13 @@ html {
 }
 
 body {
-  background: rgb(241,231,103); /* Fallback for older browsers */
+  background: rgb(241,231,103); /* Fall-back for older browsers */
   background: -moz-linear-gradient(-45deg, rgba(241,231,103,1) 0%, rgba(138,71,255,1) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, rgba(241,231,103,1) 0%,rgba(138,71,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, rgba(241,231,103,1) 0%,rgba(138,71,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#8a47ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -34,11 +69,6 @@ header,
 nav,
 section {
   display: block;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 a {
@@ -59,8 +89,8 @@ img {
   top: 0; left: 0; bottom: 0; right: 0;
   background: #f9f9f9;
   border-radius: 15px;
-  box-shadow: 0px 0px 5em .5em #606060,
-              0px 0px 2em #323232;
+  box-shadow: 0px 0px 3em #606060,
+                    0px 0px 1em #323232;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 5;
@@ -73,26 +103,65 @@ img {
   grid-column: 1/4;
   grid-row: 1/5;
   text-align: center;
-}
+ }
 
 .bio-photo {
-   border: 1px solid red; /*****test, remove later*****/
-}
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin:  10% auto 5%;
+  background: url("notme.jpg") no-repeat;
+  background-position: cover;
+  background-size: 100%;
+ }
+ 
+  .bio-name > h1 {
+	  font-family: 'Roboto Condensed', Verdana, sans-serif;
+	  font-size: 3em;
+	  margin-bottom: 0;
+  }
+  
+  .bio-name > p {
+	  font-family: Nunito, Verdana, sans-serif;
+	  opacity: .8;
+	  margin-top: 5px;
+	  font-size: .8em;
+  }
 
+  .color-shuffle {
+	-webkit-animation: color-change 6s infinite alternate;
+	-moz-animation: color-change 6s infinite alternate;
+	-ms-animation: color-change 6s infinite alternate;
+	-o-animation: color-change 6s infinite alternate;
+	animation: color-change 6s infinite alternate;
+  }
+  
 nav {
   border: 1px solid red; /*****test, remove later*****/
   width: auto;
-  height: 65px;
+  height: 40px;
   grid-column: 4/13;
   grid-row: 1/5;
   box-sizing: border-box;
 }
 
 main {
+  box-sizing: border-box;
   height: auto;
+  margin-top: 40px;
   border: 1px solid red; /*****test, remove later*****/
   width: auto;
-  margin-top: 65px;
   grid-column: 4/13;
   grid-row: 1/5;
+}
+
+@media only screen and (max-width: 1366px) {
+	.container {
+	  height: 500px;
+	  width: 1000px;
+	}
+	
+	.bio-name > h1 {
+		font-size: 1.6em;
+	}
 }
