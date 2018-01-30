@@ -1,9 +1,13 @@
+::-webkit-scrollbar {
+display: none;
+}
+
 @-webkit-keyframes color_change {
   0% { color: #2b2920; }
   25% { color: #9471b1; }
   50% { color: #efe569; }
   75% { color: #9b6577; }
-  100% { color: #8eb171; }	
+  100% { color: #8eb171; }
 }
 @-moz-keyframes color-change {
   0% { color: #2b2920; }
@@ -31,7 +35,7 @@
   25% { color: #9471b1; }
   50% { color: #efe569; }
   75% { color: #9b6577; }
-  100% { color: #8eb171; }	
+  100% { color: #8eb171; }
 }
 
 *{
@@ -71,11 +75,6 @@ section {
   display: block;
 }
 
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-
 p {
 	font-family: "Nunito", Verdana, sans-serif;
 }
@@ -104,39 +103,49 @@ img {
 	background-color: #e1e1e1;
 } */
 
+aside {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .bio {
   height: 100%;
   box-sizing: border-box;
-  border: 1px solid red; /*****test, remove later*****/
   grid-column: 1/4;
   grid-row: 1/5;
   text-align: center;
-  position: sticky /*???*/;
   overflow: hidden;
+ }
+
+ #bio {
+   position: absolute;
  }
 
 .bio-photo {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  margin:  10% auto 5%;
+  margin:  10% auto 10%;
   background: url("notme.jpg") no-repeat;
   background-position: cover;
   background-size: 100%;
+  box-shadow: 0px 0px .4em #606060;
  }
- 
+
 .bio-name > h1 {
   font-family: 'Roboto Condensed', Verdana, sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 0;
   }
-  
+
 .bio-name > p {
-  opacity: .8;
+  opacity: .7;
   margin-top: 5px;
-  font-size: .8em;
+  font-size: .9em;
   }
-  
+
  p > span {
   color: #9471b1;
   }
@@ -148,50 +157,103 @@ img {
   -o-animation: color-change 6s infinite alternate;
   animation: color-change 6s infinite alternate;
   }
-  
+
 .bio-profiles {
-  height: 35px;
-  margin-top: 90%;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   font-size: 1.5em;
   padding: 5%;
-  /*border: 1px solid red; /* test, delete */
   text-align: center;
-  -moz-box-shadow:    inset  0  8px 8px -8px #696868, 
-                        inset  0 -8px 8px -8px #696868;
-  -webkit-box-shadow: inset  0  8px 8px -8px #696868, 
-                        inset  0 -8px 8px -8px #696868;
-  box-shadow:        inset  0  8px 8px -8px #696868, 
-                        inset  0 -8px 8px -8px #696868;
+  -moz-box-shadow:    inset  0  8px 8px -8px #696868;
+  -webkit-box-shadow: inset  0  8px 8px -8px #696868;
+  box-shadow:        inset  0  8px 8px -8px #696868;
   overflow: hidden;
 }
 
-a {
+.bio-profiles a {
   padding: 3%;
+  display: inline-block;
   margin: auto;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
 }
 
 a:hover, a:visited, a:link, a:active {
   text-decoration: none;
   color: #606060;
+  box-shadow: 2px 2px #606060;
 }
-  
+
+a:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px #606060;
+}
+
 nav {
-  border: 1px solid red; /*****test, remove later*****/
   width: auto;
-  height: 40px;
+  height: 35px;
   grid-column: 4/13;
   grid-row: 1/5;
   box-sizing: border-box;
+  text-align: right;
+  padding: 1%;
+  padding-bottom: 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0 8px 6px -6px #12ADF3;
+	   -moz-box-shadow: 0 8px 6px -6px #12ADF3;
+	        box-shadow: 0 8px 6px -3px #12ADF3;
+}
+
+.navbar h3 {
+  display: inline;
+  font-family: 'Roboto Condensed', Verdana, sans-serif;
+  font-size: 1em;
+  box-shadow: none;
+  margin-right: 10px;
+  opacity: .7;
+}
+
+.navbar .selected {
+  opacity: 1;
+}
+
+.navbar a {
+  box-shadow: none;
+}
+
+.navbar a:first-child {
+  box-shadow: 0px 15px #12ADF3;
+  opacity: 1;
 }
 
 main {
   box-sizing: border-box;
   height: auto;
-  margin-top: 40px;
-  border: 1px solid red; /*****test, remove later*****/
+  margin-top: 35px;
   width: auto;
   grid-column: 4/13;
   grid-row: 1/5;
+  overflow-y: auto;
+}
+
+article {
+  height: 100%;
+  border: 1px solid red;
+}
+
+.about {
+
+}
+
+.proyectos {
+
+}
+
+.contacto {
+
 }
 
 @media only screen and (max-width: 1366px) {
@@ -199,7 +261,7 @@ main {
 	  height: 500px;
 	  width: 1000px;
 	}
-	
+
 	.bio-name > h1 {
 		font-size: 1.6em;
 	}

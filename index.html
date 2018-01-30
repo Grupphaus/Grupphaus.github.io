@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1	">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="portfolio.css">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto+Condensed:400,700" rel="stylesheet">
@@ -10,7 +10,8 @@
   </head>
   <body>
     <div class="container">
-      <aside class="bio">
+      <div class="container-bio">
+        <aside class="bio" id="bio">
         <div class="bio-photo">
         </div>
 		<div class="bio-name">
@@ -24,11 +25,24 @@
 		  <a href="mailto:fellegrini@gmail.com"><i class="fas fa-envelope fa-fw"></i></a>
 		</div>
       </aside>
+      </div>
         <nav>
-          nav
+          <div class="navbar">
+            <a href="#about"><h3 class="selected">about:me</h3></a>
+              <a href="#proyectos"><h3>proyectos</h3></a>
+              <a href="#contacto"><h3>contacto</h3></a>
+          </div>
         </nav>
         <main>
-          main
+            <article class="about" id="about">
+
+            </article>
+            <article class="proyectos" id="proyectos">
+
+            </article>
+            <article class="contacto" id="contacto">
+
+            </article>
         </main>
     </div>
   </body>
