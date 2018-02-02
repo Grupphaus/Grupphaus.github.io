@@ -8,6 +8,7 @@ window.onload = function(){
   var proyectos = document.getElementById("proyectos-content");
   var contacto = document.getElementById("contacto-content");
   var biosocial = document.querySelector(".bio-profiles");
+  // var portfolioPage = document.querySelector(".portfolio-page");
 
   aboutHeader.addEventListener("click", function () {
     aboutHeader.className = "selected";
@@ -27,4 +28,8 @@ window.onload = function(){
     contactoHeader.className = "selectedcont";
     aboutHeader.className = "";
   });
+  // portfolioPage.addEventListener("click", function (){
+  //     portfolioPage.className ="portfolio-page portfolio-stretch";
+  //   }
+  // );
 };

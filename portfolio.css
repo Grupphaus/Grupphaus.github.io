@@ -104,6 +104,30 @@ display: none;
 
 /**************************************************/
 
+@-webkit-keyframes move-up {
+  from { top: 600px; }
+  to { top: 0; }
+}
+@-moz-keyframes move-up {
+  from { top: 600px; }
+  to { top: 0; }
+}
+@-ms-keyframes move-up {
+  from { top: 600px; }
+  to { top: 0; }
+}
+@-o-keyframes move-up {
+  from { top: 600px; }
+  to { top: 0; }
+}
+
+@keyframes move-up {
+  from { top: 600px; }
+  to { top: 0; }
+}
+
+/**************************************************/
+
 @-webkit-keyframes color-change {
   0% { color: #2b2920; }
   25% { color: #9471b1; }
@@ -174,8 +198,7 @@ article,
 aside,
 footer,
 header,
-nav,
-section {
+nav {
   display: block;
 }
 
@@ -246,7 +269,7 @@ aside {
 .bio-name > p {
   opacity: .7;
   margin-top: 5px;
-  font-size: .9em;
+  font-size: 1.1em;
   }
 
  p > span {
@@ -425,19 +448,67 @@ article {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 }
 
 .technologies * {
   color: white;
   padding-top: 5%;
   flex-shrink: 2;
+  position: relative;
+  top: 600px;
+  animation: move-up 1s linear;
+  animation-delay: .3s;
+  animation-fill-mode: forwards;
 }
 
 /**************************************************/
 
 .proyectos {
   background-color: steelblue;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
+
+.portfolio {
+  width: 85%;
+  height: 85%;
+  background-color: #B47846;
+  box-shadow: 10px 10px #323232;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* animation: scale-up 1s linear;
+  animation-delay: .3s;
+  animation-fill-mode: forwards; */
+}
+
+.portfolio-page {
+  width: 16.66%;
+  height: 36%;
+  background-color: #fafafa;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #323232;
+  flex-shrink: 3;
+  cursor: pointer;
+  transition: all 500ms ease-in;
+  margin: 10px;
+}
+
+.portfolio-page:hover {
+  width: 75%;
+  height: 200%;
+}
+
+/**************************************************/
 
 .contacto {
   background-color: #8eb171;
