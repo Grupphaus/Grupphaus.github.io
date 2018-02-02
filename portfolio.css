@@ -131,35 +131,35 @@ display: none;
 @-webkit-keyframes color-change {
   0% { color: #2b2920; }
   25% { color: #9471b1; }
-  50% { color: steelblue; }
+  50% { color: #4682B4; }
   75% { color: #9b6577; }
   100% { color: #8eb171; }
 }
 @-moz-keyframes color-change {
   0% { color: #2b2920; }
   25% { color: #9471b1; }
-  50% { color: steelblue; }
+  50% { color: #4682B4; }
   75% { color: #9b6577; }
   100% { color: #8eb171; }
 }
 @-ms-keyframes color-change {
   0% { color: #2b2920; }
   25% { color: #9471b1; }
-  50% { color: steelblue; }
+  50% { color: #4682B4; }
   75% { color: #9b6577; }
   100% { color: #8eb171; }
 }
 @-o-keyframes color-change {
   0% { color: #2b2920; }
   25% { color: #9471b1; }
-  50% { color: steelblue; }
+  50% { color: #4682B4; }
   75% { color: #9b6577; }
   100% { color: #8eb171; }
 }
 @keyframes color-change {
   0% { color: #2b2920; }
   25% { color: #9471b1; }
-  50% { color: steelblue; }
+  50% { color: #4682B4; }
   75% { color: #9b6577; }
   100% { color: #8eb171; }
 }
@@ -354,7 +354,7 @@ h3 {
 
 .selectedproy {
   opacity: 1;
-  box-shadow: 0px 11px steelblue;
+  box-shadow: 0px 11px #4682B4;
 }
 
 .selectedcont {
@@ -465,47 +465,66 @@ article {
 /**************************************************/
 
 .proyectos {
-  background-color: steelblue;
+  background-color: #4682B4;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .portfolio {
   width: 85%;
   height: 85%;
-  background-color: #B47846;
-  box-shadow: 10px 10px #323232;
+  background-color: #ffb19b;
+  box-shadow: 3px 3px #323232;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  overflow-y: scroll;
   /* animation: scale-up 1s linear;
   animation-delay: .3s;
   animation-fill-mode: forwards; */
 }
 
 .portfolio-page {
-  width: 16.66%;
-  height: 36%;
+  width: 85%;
+  height: 75%;
   background-color: #fafafa;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px #323232;
-  flex-shrink: 3;
+  box-shadow: 7px 7px 0px #606060;
+  flex-shrink: 0;
   cursor: pointer;
   transition: all 500ms ease-in;
-  margin: 10px;
+  margin-left: 5%;
+  position: relative;
 }
 
-.portfolio-page:hover {
-  width: 75%;
-  height: 200%;
+.homunculus {
+  background-image: url("homunc.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.hawkins {
+  background-image: url("hawkins.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.karnivale {
+  background-image: url("karnivale.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.randomQuotes {
+  background-image: url("randomquotes.png");
+  background-size: cover;
+  background-position: center center;
 }
 
 /**************************************************/
