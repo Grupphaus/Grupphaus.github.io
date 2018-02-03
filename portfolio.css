@@ -59,23 +59,23 @@ display: none;
 /**************************************************/
 
 @-webkit-keyframes move-right {
-  from { left: -700px; }
+  from { left: -800px; }
   to { left: 0; }
 }
 @-moz-keyframes move-right {
-  from { left: -700px; }
+  from { left: -800px; }
   to { left: 0; }
 }
 @-ms-keyframes move-right {
-  from { left: -700px; }
+  from { left: -800px; }
   to { left: 0; }
 }
 @-o-keyframes move-right {
-  from { left: -700px; }
+  from { left: -800px; }
   to { left: 0; }
 }
 @keyframes move-right {
-  from { left: -700px; }
+  from { left: -800px; }
   to { left: 0; }
 }
 
@@ -166,6 +166,36 @@ display: none;
 
 /**************************************************/
 
+@-webkit-keyframes scale-up {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+@-ms-keyframes scale-up {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+@-moz-keyframes scale-up {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+@-o-keyframes scale-up {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+@keyframes scale-up {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+
+/**************************************************/
+
+@keyframes text-shadow {
+  from {text-shadow: 0px 0px #606060;}
+  to {text-shadow: 2px 2px #606060;}
+}
+
+/**************************************************/
+
 *{
 	margin: 0;
 	padding: 0;
@@ -221,11 +251,11 @@ img {
   top: 0; left: 0; bottom: 0; right: 0;
   background: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0px 0px 3em #606060,
-                    0px 0px 1em #323232;
+  box-shadow: 0px 0px .5em #323232;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 5;
+  box-sizing: border-box;
 }
 
 aside {
@@ -385,7 +415,6 @@ main {
 
 article {
   height: 100%;
-  border-bottom: 1px solid red;
   -moz-box-shadow:    inset  0  8px 8px -8px #323232;
   -webkit-box-shadow: inset  0  8px 8px -8px #323232;
   box-shadow:         inset  0  8px 8px -8px #323232;
@@ -412,6 +441,26 @@ article {
   box-shadow: 0px 10px 0px #323232;
 }
 
+.paragraph {
+  text-align: right;
+  font-size: .8em;
+  padding: 5%;
+  border-right: 3px solid #7eba9e;
+  border-bottom: 3px solid #7eba9e;
+  transform: scale(0);
+  animation: scale-up .2s linear;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+}
+
+.paragraph p {
+  margin-top: 15px;
+  /* text-shadow: 2px 2px #606060; */
+  animation: text-shadow .5s linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
 .intro {
   flex: 0 1 auto;
   padding: 5%;
@@ -426,7 +475,9 @@ article {
 
 .intro h2 {
   border-right: 3px solid #fafafa;
-  padding-right: 25px;
+  padding: 5px 5% 5px;
+  text-shadow: 2px 2px #606060;
+  /* background-color: #cfb08d; */
 }
 
 .technologies {
@@ -476,18 +527,24 @@ article {
 .portfolio {
   width: 85%;
   height: 85%;
+  transition: all 300ms ease-in;
   background-color: #ffb19b;
   box-shadow: 3px 3px #323232;
   box-sizing: border-box;
+  position: relative;
+  left: -800px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-around;
   overflow-y: scroll;
-  /* animation: scale-up 1s linear;
-  animation-delay: .3s;
-  animation-fill-mode: forwards; */
+}
+
+.portfolio-animate {
+  animation: move-right .5s linear;
+  animation-delay: none;
+  animation-fill-mode: forwards;
 }
 
 .portfolio-page {
@@ -496,7 +553,8 @@ article {
   background-color: #fafafa;
   border-radius: 5px;
   box-shadow: 7px 7px 0px #606060;
-  flex-shrink: 0;
+  box-sizing: border-box;
+  flex-shrink: 1;
   cursor: pointer;
   transition: all 500ms ease-in;
   margin-left: 5%;
@@ -535,11 +593,48 @@ article {
 
 @media only screen and (max-width: 1366px) {
 	.container {
-	  height: 500px;
-	  width: 1000px;
+	  height: 550px;
+	  width: 1100px;
 	}
 
+  h3 {
+    font-size: .9em;
+    margin-right: 5px;
+  }
+
 	.bio-name > h1 {
-		font-size: 1.6em;
+		font-size: 1.5em;
 	}
+
+  .bio-name p {
+    font-size: 1em;
+  }
+
+  .bio-photo {
+    width: 125px;
+    height: 125px;
+  }
+
+  nav {
+    padding: 7px;
+  }
+
+  .intro h2 {
+    font-size: 1.4em;
+  }
+
+  .technologies {
+    font-size: 3em;
+  }
+
+  .portfolio {
+    width: 85%;
+    height: 85%;
+  }
+
+  .portfolio-page {
+    width: 80%;
+    height: 80%;
+    background-size: 100% 100%;
+  }
 }

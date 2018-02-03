@@ -8,6 +8,7 @@ window.onload = function(){
   var proyectos = document.getElementById("proyectos-content");
   var contacto = document.getElementById("contacto-content");
   var biosocial = document.querySelector(".bio-profiles");
+  var portfolio = document.querySelector(".portfolio");
   // var portfolioPage = document.querySelector(".portfolio-page");
 
   aboutHeader.addEventListener("click", function () {
@@ -18,6 +19,7 @@ window.onload = function(){
   });
   proyectosHeader.addEventListener("click", function () {
     proyectosHeader.className = "selectedproy";
+    portfolio.className = "portfolio portfolio-animate"
     aboutHeader.className = "";
     contactoHeader.className = "";
     biosocial.className = "bio-profiles";
@@ -28,8 +30,4 @@ window.onload = function(){
     contactoHeader.className = "selectedcont";
     aboutHeader.className = "";
   });
-  // portfolioPage.addEventListener("click", function (){
-  //     portfolioPage.className ="portfolio-page portfolio-stretch";
-  //   }
-  // );
 };
