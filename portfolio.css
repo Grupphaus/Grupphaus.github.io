@@ -2,60 +2,6 @@
 display: none;
 }
 
-/* @-webkit-keyframes opacity-change {
-  0% {opacity: 0.1;}
-  15% {opacity: 0.15;}
-  30% {opacity: 0.3;}
-  45% {opacity: 0.45;}
-  60% {opacity: 0.6;}
-  75% {opacity: 0.75;}
-  90% {opacity: 0.9;}
-  100% {opacity: 1;}
-}
-
-@-moz-keyframes opacity-change {
-  0% {opacity: 0.1;}
-  15% {opacity: 0.15;}
-  30% {opacity: 0.3;}
-  45% {opacity: 0.45;}
-  60% {opacity: 0.6;}
-  75% {opacity: 0.75;}
-  90% {opacity: 0.9;}
-  100% {opacity: 1;}
-}
-
-@-ms-keyframes opacity-change {
-  0% {opacity: 0.1;}
-  15% {opacity: 0.15;}
-  30% {opacity: 0.3;}
-  45% {opacity: 0.45;}
-  60% {opacity: 0.6;}
-  75% {opacity: 0.75;}
-  90% {opacity: 0.9;}
-  100% {opacity: 1;}
-}
-@-o-keyframes opacity-change {
-  0% {opacity: 0.1;}
-  15% {opacity: 0.15;}
-  30% {opacity: 0.3;}
-  45% {opacity: 0.45;}
-  60% {opacity: 0.6;}
-  75% {opacity: 0.75;}
-  90% {opacity: 0.9;}
-  100% {opacity: 1;}
-}
-
-@keyframes opacity-change {
-  0% {opacity: 0.1;}
-  15% {opacity: 0.15;}
-  30% {opacity: 0.3;}
-  45% {opacity: 0.45;}
-  60% {opacity: 0.6;}
-  75% {opacity: 0.75;}
-  90% {opacity: 0.9;}
-  100% {opacity: 1;}
-} */
-
 /**************************************************/
 
 @-webkit-keyframes move-right {
@@ -191,7 +137,7 @@ display: none;
 
 @keyframes text-shadow {
   from {text-shadow: 0px 0px #606060;}
-  to {text-shadow: 2px 2px #606060;}
+  to {text-shadow: 10px 10px #323232;}
 }
 
 /**************************************************/
@@ -428,8 +374,7 @@ article {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .about div:first-child {
@@ -455,10 +400,7 @@ article {
 
 .paragraph p {
   margin-top: 15px;
-  /* text-shadow: 2px 2px #606060; */
-  animation: text-shadow .5s linear;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
+  text-shadow: 2px 2px #606060;
 }
 
 .intro {
@@ -559,36 +501,34 @@ article {
   transition: all 500ms ease-in;
   margin-left: 5%;
   position: relative;
+  background-size: 100% 100%;
 }
 
 .homunculus {
   background-image: url("homunc.png");
-  background-size: cover;
-  background-position: center center;
 }
 
 .hawkins {
   background-image: url("hawkins.png");
-  background-size: cover;
-  background-position: center center;
 }
 
 .karnivale {
   background-image: url("karnivale.png");
-  background-size: cover;
-  background-position: center center;
 }
 
 .randomQuotes {
   background-image: url("randomquotes.png");
-  background-size: cover;
-  background-position: center center;
 }
 
 /**************************************************/
 
 .contacto {
   background-color: #8eb171;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -635,6 +575,5 @@ article {
   .portfolio-page {
     width: 80%;
     height: 80%;
-    background-size: 100% 100%;
   }
 }
