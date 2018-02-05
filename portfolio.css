@@ -388,13 +388,14 @@ article {
 
 .paragraph {
   text-align: right;
-  font-size: .8em;
+  font-size: 1em;
   padding: 5%;
+  margin-top: 25%;
   border-right: 3px solid #7eba9e;
   border-bottom: 3px solid #7eba9e;
   transform: scale(0);
-  animation: scale-up .2s linear;
-  animation-delay: 1.6s;
+  animation: scale-up .3s linear;
+  animation-delay: 1.3s;
   animation-fill-mode: forwards;
 }
 
@@ -419,7 +420,6 @@ article {
   border-right: 3px solid #fafafa;
   padding: 5px 5% 5px;
   text-shadow: 2px 2px #606060;
-  /* background-color: #cfb08d; */
 }
 
 .technologies {
@@ -450,7 +450,7 @@ article {
   flex-shrink: 2;
   position: relative;
   top: 600px;
-  animation: move-up 1s linear;
+  animation: move-up .7s linear;
   animation-delay: .3s;
   animation-fill-mode: forwards;
 }
@@ -561,6 +561,11 @@ article {
 
   .intro h2 {
     font-size: 1.4em;
+  }
+
+  .paragraph {
+    font-size: 0.8em;
+    margin-top: 1%;
   }
 
   .technologies {
