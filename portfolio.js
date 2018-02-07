@@ -7,7 +7,6 @@ window.onload = function(){
   var about = document.getElementById("about-content");
   var proyectos = document.getElementById("proyectos-content");
   var contacto = document.getElementById("contacto-content");
-  var biosocial = document.querySelector(".bio-profiles");
   var portfolio = document.querySelector(".portfolio");
 
   aboutHeader.addEventListener("click", function () {
@@ -17,13 +16,13 @@ window.onload = function(){
   });
   proyectosHeader.addEventListener("click", function () {
     proyectosHeader.className = "selected";
-    portfolio.className = "portfolio portfolio-animate";
     aboutHeader.className = "";
     contactoHeader.className = "";
+    portfolio.className = "portfolio portfolio-animate";
   });
   contactoHeader.addEventListener("click", function () {
-    proyectosHeader.className = "";
     contactoHeader.className = "selected";
+    proyectosHeader.className = "";
     aboutHeader.className = "";
   });
 };

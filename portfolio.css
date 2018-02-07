@@ -135,12 +135,6 @@ html {
 }
 
 body {
-  /* background: rgb(241,231,103); /* Fall-back for older browsers */
-  /* background: -moz-linear-gradient(-45deg, rgba(241,231,103,1) 0%, rgba(138,71,255,1) 100%); /* FF3.6-15 */
-  /* background: -webkit-linear-gradient(-45deg, rgba(241,231,103,1) 0%,rgba(138,71,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  /* background: linear-gradient(135deg, rgba(241,231,103,1) 0%,rgba(138,71,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  /* background-repeat: no-repeat; */
-  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#8a47ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   background: url("footer_lodyas.png") repeat;
   display: flex;
   flex-wrap: wrap;
@@ -342,11 +336,12 @@ article {
 
 .paragraph {
   text-align: right;
-  font-size: 1em;
+  font-size: .9em;
   padding: 5%;
-  padding-top: 45%;
   border-right: 3px solid #7eba9e;
   border-bottom: 3px solid #7eba9e;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .paragraph p {
@@ -400,7 +395,7 @@ article {
   flex-shrink: 2;
   position: relative;
   top: 600px;
-  animation: move-up 1s linear;
+  animation: move-up .5s linear;
   animation-delay: .3s;
   animation-fill-mode: forwards;
 }
@@ -510,7 +505,7 @@ article {
   }
 
   .paragraph {
-    font-size: 0.8em;
+    font-size: 0.7em;
     padding: 5%;
   }
 
