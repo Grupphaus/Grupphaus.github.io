@@ -18,16 +18,16 @@ window.onload = function(){
     biosocial.className = "bio-profiles";
   });
   proyectosHeader.addEventListener("click", function () {
-    proyectosHeader.className = "selectedproy";
-    portfolio.className = "portfolio portfolio-animate"
+    proyectosHeader.className = "selected";
+    portfolio.className = "portfolio portfolio-animate";
     aboutHeader.className = "";
     contactoHeader.className = "";
     biosocial.className = "bio-profiles";
   });
   contactoHeader.addEventListener("click", function () {
     proyectosHeader.className = "";
-    biosocial.className = "bio-profiles biosocial";
-    contactoHeader.className = "selectedcont";
+    biosocial.className = "bio-profiles";
+    contactoHeader.className = "selected";
     aboutHeader.className = "";
   });
 };
