@@ -1,18 +1,3 @@
-// $(document).ready(function(){
-//   // Add smooth scrolling to all links
-//   $("a").on('click', function(event) {
-//     if (this.hash !== "") {
-//       event.preventDefault();
-//       var hash = this.hash;
-//
-//       $('main').animate({
-//         scrollTop: $(hash).offset().top}, 1300, function(){
-//         window.location.hash = hash;
-//       });
-//     }
-//   });
-// });
-
 window.onload = function(){
   var main = document.getElementById('container-main');
   var aboutHeader = document.getElementById("about");
@@ -22,6 +7,7 @@ window.onload = function(){
   var proyectos = document.getElementById("proyectos-content");
   var contacto = document.getElementById("contacto-content");
   var portfolio = document.querySelector(".portfolio");
+  var formContainer = document.querySelector(".form-container");
 
   aboutHeader.addEventListener("click", function () {
     aboutHeader.className = "selected";
@@ -36,6 +22,7 @@ window.onload = function(){
   });
   contactoHeader.addEventListener("click", function () {
     contactoHeader.className = "selected";
+    formContainer.className = "form-container form-container-animate";
     proyectosHeader.className = "";
     aboutHeader.className = "";
   });
