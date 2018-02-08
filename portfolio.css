@@ -5,23 +5,23 @@ display: none;
 /**************************************************/
 
 @-webkit-keyframes move-right {
-  from { left: -800px; }
+  from { left: -1000px; }
   to { left: 0; }
 }
 @-moz-keyframes move-right {
-  from { left: -800px; }
+  from { left: -1000px; }
   to { left: 0; }
 }
 @-ms-keyframes move-right {
-  from { left: -800px; }
+  from { left: -1000px; }
   to { left: 0; }
 }
 @-o-keyframes move-right {
-  from { left: -800px; }
+  from { left: -1000px; }
   to { left: 0; }
 }
 @keyframes move-right {
-  from { left: -800px; }
+  from { left: -1000px; }
   to { left: 0; }
 }
 
@@ -163,7 +163,7 @@ img {
 .container {
   height: 900px;
   width: 1300px;
-  overflow: auto;
+  overflow: hidden;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -172,7 +172,6 @@ img {
   box-shadow: 0px 0px .5em #323232;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 5;
   box-sizing: border-box;
 }
 
@@ -187,7 +186,6 @@ aside {
   height: 100%;
   box-sizing: border-box;
   grid-column: 1/4;
-  grid-row: 1/5;
   text-align: center;
   overflow: hidden;
   box-shadow: inset 0px 0px 8px -3px #696868;
@@ -235,7 +233,7 @@ aside {
 .bio-profiles {
   box-sizing: border-box;
   position: absolute;
-  height: 11.5%;
+  height: 10%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -270,12 +268,12 @@ a:hover {
 
 nav {
   width: auto;
-  height: 35px;
+  height: 25px;
   grid-column: 4/13;
   grid-row: 1/5;
   box-sizing: border-box;
   text-align: right;
-  padding: 1%;
+  padding-top: 8px;
   padding-bottom: 0;
   overflow: hidden;
 }
@@ -346,7 +344,7 @@ article {
 
 .paragraph p {
   margin-top: 15px;
-  text-shadow: 2px 2px #606060;
+  text-shadow: 2px 2px #696969;
 }
 
 .intro {
@@ -414,12 +412,11 @@ article {
 .portfolio {
   width: 85%;
   height: 85%;
-  transition: all 300ms ease-in;
   background-color: #ffb19b;
   box-shadow: 3px 3px #323232;
   box-sizing: border-box;
   position: relative;
-  left: -800px;
+  left: -1000px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -430,13 +427,12 @@ article {
 
 .portfolio-animate {
   animation: move-right .5s linear;
-  animation-delay: none;
   animation-fill-mode: forwards;
 }
 
 .portfolio-page {
   width: 85%;
-  height: 75%;
+  height: 70%;
   background-color: #fafafa;
   border-radius: 5px;
   box-shadow: 7px 7px 0px #606060;

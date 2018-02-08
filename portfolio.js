@@ -1,3 +1,17 @@
+// $(document).ready(function(){
+//   // Add smooth scrolling to all links
+//   $("a").on('click', function(event) {
+//     if (this.hash !== "") {
+//       event.preventDefault();
+//       var hash = this.hash;
+//
+//       $('main').animate({
+//         scrollTop: $(hash).offset().top}, 1300, function(){
+//         window.location.hash = hash;
+//       });
+//     }
+//   });
+// });
 
 window.onload = function(){
   var main = document.getElementById('container-main');
@@ -16,9 +30,9 @@ window.onload = function(){
   });
   proyectosHeader.addEventListener("click", function () {
     proyectosHeader.className = "selected";
+    portfolio.className = "portfolio portfolio-animate";
     aboutHeader.className = "";
     contactoHeader.className = "";
-    portfolio.className = "portfolio portfolio-animate";
   });
   contactoHeader.addEventListener("click", function () {
     contactoHeader.className = "selected";
