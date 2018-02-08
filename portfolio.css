@@ -199,7 +199,8 @@ aside {
   background: url("notme.jpg") no-repeat;
   background-position: cover;
   background-size: 100%;
-  box-shadow: 0px 0px .4em #606060;
+  border: 1px solid #fafafa;
+  box-shadow: inset 0px 0px 2em #323232;
  }
 
 .bio-name > h1 {
@@ -336,9 +337,6 @@ article {
   border-right: 3px solid #7eba9e;
   border-bottom: 3px solid #7eba9e;
   box-sizing: border-box;
-  box-shadow: inset 1px 1px #323232;
-  -moz-box-shadow: inset 1px 1px #323232;
-  -webkit-box-shadow: inset 1px 1px #323232;
   border-radius: 55px 0px 5px 0px;
   overflow: hidden;
 }
@@ -415,7 +413,6 @@ article {
   height: 85%;
   background-color: #ffb19b;
   background-color: #fafafa;
-  /* box-shadow: 3px 3px #323232; */
   box-sizing: border-box;
   position: relative;
   left: -1000px;
