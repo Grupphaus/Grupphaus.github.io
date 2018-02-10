@@ -556,12 +556,12 @@ input:focus, textarea:focus {
 
 @media only screen and (max-width: 1366px) {
 	.container {
-	  height: 750px;
+	  height: 575px;
 	  width: 1100px;
 	}
 
   h3 {
-    font-size: .9em;
+    font-size: .8em;
     margin-right: 5px;
   }
 
@@ -573,21 +573,40 @@ input:focus, textarea:focus {
     font-size: 1em;
   }
 
+  .bio-photo {
+    height: 125px;
+    width: 125px;
+  }
+  .bio-profiles {
+    height: 15%;
+  }
   nav {
     padding: 7px;
   }
 
+  .about div:first-child {
+    box-shadow: 0px 5px #323232;
+    width: 35%;
+    height: 70%;
+    padding: 3% 2% 6% 3%;
+  }
+
   .intro h2 {
-    font-size: 1em;
+    font-size: .8em;
   }
 
   .paragraph {
-    font-size: 0.85em;
-    padding: 5%;
+    font-size: 0.65em;
+    padding: 4%;
+    box-shadow: inset 1px 1px #323232;
   }
 
   .technologies {
     font-size: 3em;
+    box-shadow: 5px 5px #323232;
+    width: 3%;
+    padding: 3%;
+    height: 80%;
   }
 
   .portfolio {
