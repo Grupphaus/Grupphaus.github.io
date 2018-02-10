@@ -525,6 +525,7 @@ input, textarea, button {
   margin: 15px;
   width: 300px;
   resize: none;
+  color: #39537c;
   background-color: #8eb7fa;
   box-shadow: inset 3px 3px #9cc0fa;
   border-bottom: 5px solid #39537c;
@@ -566,19 +567,21 @@ input:focus, textarea:focus {
   }
 
 	.bio-name > h1 {
-		font-size: 1.5em;
+		font-size: 1.4em;
 	}
 
   .bio-name p {
-    font-size: 1em;
+    font-size: .8em;
   }
 
   .bio-photo {
-    height: 125px;
-    width: 125px;
+    height: 120px;
+    width: 120px;
+    margin: 20px auto 15px auto;
   }
   .bio-profiles {
     height: 15%;
+    font-size: 1.2em;
   }
   nav {
     padding: 7px;
@@ -586,7 +589,7 @@ input:focus, textarea:focus {
 
   .about div:first-child {
     box-shadow: 0px 5px #323232;
-    width: 35%;
+    width: 40%;
     height: 70%;
     padding: 3% 2% 6% 3%;
   }
@@ -617,5 +620,65 @@ input:focus, textarea:focus {
   .portfolio-page {
     width: 80%;
     height: 80%;
+    margin-bottom: 35px;
+  }
+
+  .more {
+    width: 45%;
+  }
+
+  .form-container {
+    width: 55%;
+    height: 77%;
+    box-shadow: 5px 5px #323232;
+  }
+
+  input, textarea, button {
+    font-size: .8em;
+    padding: 2%;
+    margin: 10px;
+    margin-bottom: 5px;
+    width: 250px;
+  }
+
+  button[type=submit] {
+    border-bottom: 3px solid #f98272;
+    width: 50%;
+    padding: 1% 0 1% 0;
+    margin: 15px auto;
+    font-size: 1.7em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .container {
+    height: 600px;
+    width: 900px;
+  }
+
+  .bio-name > h1 {
+    font-size: 1.3em;
+  }
+
+  .bio-photo {
+    height: 115px;
+    width: 115px;
+  }
+
+  .bio-profiles {
+    height: 12%;
+  }
+
+  .about div:first-child {
+    width: 45%;
+  }
+
+  .technologies {
+    padding: 4%;
+  }
+
+  .portfolio-page {
+    height: 65%;
   }
 }
