@@ -267,7 +267,6 @@ nav {
   width: auto;
   height: 25px;
   grid-column: 4/13;
-  grid-row: 1/5;
   box-sizing: border-box;
   text-align: right;
   padding-top: 8px;
@@ -298,10 +297,9 @@ h3 {
 main {
   box-sizing: border-box;
   height: auto;
-  margin-top: 35px;
   width: auto;
+  margin-top: 35px;
   grid-column: 4/13;
-  grid-row: 1/5;
   overflow-y: hidden;
 }
 
@@ -651,7 +649,6 @@ input:focus, textarea:focus {
 }
 
 @media only screen and (max-width: 1024px) {
-
   .container {
     height: 600px;
     width: 900px;
@@ -680,5 +677,80 @@ input:focus, textarea:focus {
 
   .portfolio-page {
     height: 65%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    height: 550px;
+    width: 900px;
+  }
+
+  .about div:first-child {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .bio-photo {
+    height: 95px;
+    width: 95px;
+    margin: 15px auto 10px auto;
+  }
+
+  .bio-name > h1 {
+    font-size: 1.05em;
+  }
+
+  .bio-name > p {
+    font-size: .71em;
+  }
+
+  .bio-profiles {
+    height: 14%;
+    font-size: 1em;
+  }
+
+  main {
+    margin-top: 10px;
+  }
+
+  .about {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+  }
+
+  .about div:first-child {
+    width: 80%;
+    height: 100%;
+    box-shadow: 0px 0px #fafafa;
+  }
+
+  .paragraph {
+    padding: 0 3% 0 10%;
+    border-radius: 35px 0px 0px 0px;
+  }
+
+  .paragraph p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .technologies {
+    width: 10%;
+    height: 100%;
+    box-shadow: 0px 0px #fafafa;
+    align-self: flex-end;
+    font-size: 1.5em;
+    padding: 2%;
   }
 }
