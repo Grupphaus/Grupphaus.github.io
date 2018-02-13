@@ -334,6 +334,7 @@ article {
   background-color: #4b6e6f;
   border-right: 3px solid #7eba9e;
   border-bottom: 3px solid #7eba9e;
+  box-shadow: inset 1px 1px #323232;
   box-sizing: border-box;
   border-radius: 55px 0px 5px 0px;
   overflow: hidden;
@@ -444,6 +445,16 @@ article {
 
 .portfolio-page:hover {
   transform: scale(1.03);
+}
+
+div.hover {
+  background-color: rgba(32, 32, 32, .9);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 500ms ease-in;
+  z-index: 5;
 }
 
 .homunculus {

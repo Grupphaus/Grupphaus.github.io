@@ -7,6 +7,8 @@ window.onload = function(){
   var proyectos = document.getElementById("proyectos-content");
   var contacto = document.getElementById("contacto-content");
   var portfolio = document.querySelector(".portfolio");
+  var portfolioPage = document.querySelectorAll("portfolio-page")
+  var hover = document.querySelectorAll('.hover');
   var formContainer = document.querySelector(".form-container");
 
   aboutHeader.addEventListener("click", function () {
@@ -26,4 +28,13 @@ window.onload = function(){
     proyectosHeader.className = "";
     aboutHeader.className = "";
   });
+
+  for (var i = 0; i < hover.length; i++) {
+      hover[i].addEventListener('mouseover', function() {
+        this.style.opacity = "1";
+      });
+      hover[i].addEventListener('mouseleave', function() {
+        this.style.opacity = "0";
+      });
+  }
 };
