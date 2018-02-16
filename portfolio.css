@@ -158,7 +158,7 @@ img {
 /**************************************************/
 
 .container {
-  height: 90%;
+  height: 95%;
   width: 90%;
   overflow: hidden;
   margin: auto;
@@ -509,7 +509,7 @@ div.hover p, div.hover h3 {
 
 .form-container {
   width: 65%;
-  height: 75%;
+  height: 85%;
   background-color: #72a6f9;
   display: flex;
   flex-direction: row;
