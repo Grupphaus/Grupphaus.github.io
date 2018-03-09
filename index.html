@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="portfolio.css">
 	  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script type="text/javascript" src="portfolio.js"></script>
+    <!-- <script type="text/javascript" src="portfolio.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto+Condensed:400,700" rel="stylesheet">
     <title>Federico Pellegrini</title>
   </head>
   <body>
-    <div class="container">
+      <nav>
+          <a href="#about-content"><h3 id="about" class="selected">about:me</h3></a>
+          <a href="#proyectos-content"><h3 class="" id="proyectos">proyectos</h3></a>
+      </nav>
       <div class="container-bio">
-        <aside class="bio" id="bio">
-          <div class="bio-photo">
-          </div>
+          <div class="bio-photo"></div>
 		      <div class="bio-name">
 		        <h1>{ federico<span class="color-shuffle">Pellegrini</span> }</h1>
 		        <p><span>class</span>="<strong>frontEndDeveloper</strong>"</p>
@@ -25,15 +26,7 @@
 		        <a href="https://www.instagram.com/fellegr/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-fw"></i></a>
 		        <a href="mailto:fellegrini@gmail.com" rel="noopener noreferrer"><i class="fas fa-envelope fa-fw"></i></a>
 		      </div>
-        </aside>
       </div>
-        <nav>
-          <div class="navbar">
-            <a href="#about-content"><h3 id="about" class="selected">about:me</h3></a>
-            <a href="#proyectos-content"><h3 class="" id="proyectos">proyectos</h3></a>
-            <a href="#contacto-content"><h3 class="" id="contacto">contacto</h3></a>
-          </div>
-        </nav>
         <main id="container-main">
           <article class="about" id="about-content">
             <div class="intro">
@@ -62,19 +55,19 @@
             <div class="portfolio">
               <div class="homunculus portfolio-page">
                 <div class="hover">
-                  <h3>HOMUNCULUS DESIGN</h3>
+                  <h3>HOMUNCULUS Design</h3>
                   <p></p>
                 </div>
               </div>
               <div class="hawkins portfolio-page">
                 <div class="hover">
-                  <h3>RICHARD HAWKINS</h3>
+                  <h3>Richard Hawkins</h3>
                   <p></p>
                 </div>
               </div>
               <div class="karnivale portfolio-page">
                 <div class="hover">
-                  <h3>KARNIVALE TOURS</h3>
+                  <h3>Karnivale Tours</h3>
                   <p></p>
                 </div>
               </div>
@@ -84,22 +77,7 @@
                   <p></p>
                 </div>
               </div>
-              <div class="more portfolio-page">
-                <i class="fas fa-cogs fa-fw"></i>
-              </div>
             </div>
           </article>
-          <article class="contacto" id="contacto-content">
-            <div class="form-container">
-              <form class="" action="#" method="post">
-                <input type="text" name="nombre" value="" placeholder="nombre:" required>
-                <input type="email" name="email" value="" placeholder="e-mail:" required>
-                <textarea name="mensaje" rows="10" cols="auto" placeholder="mensaje:" required></textarea>
-                <button type='submit'><i class="far fa-envelope"></i></button>
-              </form>
-            </div>
-          </article>
-      </main>
-    </div>
   </body>
 </html>
