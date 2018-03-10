@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 h1,
 h2,
 h3 {
@@ -29,14 +33,15 @@ body {
   grid-template-rows: repeat(8, 1fr);
   grid-template-areas:
           "bio bio nav nav nav nav"
-          "bio bio main main main ."
-          "bio bio main main main ."
-          "bio bio main main main ."
-          "bio bio main main main ."
-          "bio bio main main main ."
-          "bio bio main main main ."
-          "bio bio main main main ."
-          "bio bio main main main ."
+          "bio bio main main main main"
+          "bio bio main main main main"
+          "bio bio main main main main"
+          "bio bio main main main main"
+          "bio bio main main main main"
+          "bio bio main main main main"
+          "bio bio main main main main"
+          "bio bio main main main main";
+  background-color: #fafafa;
 }
 
 div.container-bio {
@@ -46,6 +51,9 @@ div.container-bio {
   text-align: center;
   position: fixed;
   background-color: #fafafa;
+  background-color: #0288cf;
+  color: #fafafa;
+  z-index: 50;
 }
 
 div.bio-photo {
@@ -59,8 +67,12 @@ div.bio-photo {
 }
 
 .bio-name {
-  /* background-color: white; */
   padding: 3%;
+  text-shadow: 1px 1px 1px #014467;
+}
+
+.bio-name span {
+  color: #99cfeb;
 }
 
 .bio-profiles {
@@ -69,14 +81,16 @@ div.bio-photo {
   left: 0;
   right: 0;
   display: flex;
+  height: 10%;
   align-items: center;
   justify-content: space-around;
   font-size: 2em;
-  background-color: #ededed;
+  background-color: #01517c;
 }
 
-.bio-profiles a {
-  padding: 5% 0 5% 0;
+.bio-profiles a:hover {
+  transform: scale(1.2);
+  color: #fc8a50;
 }
 
 nav {
@@ -84,18 +98,35 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  width: 100%;
+  z-index: 5;
+  overflow: hidden;
+  background-color: #fafafa;
+  position: fixed;
+  top: 0;
+  padding: 1%;
 }
 
 nav a {
-  margin: 0 5%;
+  margin: 0 6%;
+}
+
+.selected {
+  box-shadow: 0px 10px 0px #fc8a50;
 }
 
 main {
   grid-area: main;
+  height: 100%;
+  /* overflow: auto; */
+  scroll-behavior: smooth;
 }
 
 .about {
-  height: 600px;
+  height: 100%;
+  padding-top: 10%;
+  margin-bottom: 20%;
+  margin-right: 25%;
 }
 
 .intro {
@@ -111,7 +142,7 @@ main {
 
 .technologies {
   font-size: 4em;
-  margin-top: 5%;
+  margin: 15% 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -131,4 +162,53 @@ main {
 
 .fa-git-square {
   color: #333;
+}
+
+article {
+  height: 100%;
+}
+
+article.proyectos {
+  height: 100%;
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding-top: 5%;
+}
+
+.portfolio-page {
+  min-height: 65%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5%;
+  box-shadow: 10px 10px 1px #51696d;
+  border: 2px solid #51696d;
+  transition: all 500ms ease-in-out;
+}
+
+.portfolio-page:hover {
+  transform: scale(1.05);
+  border: 0px solid #fafafa;
+  box-shadow: inset 1px 1px 1em #191919 ;
+}
+
+.homunculus {
+  background-image: url("homunc.png");
+}
+
+.hawkins {
+  background-image: url("hawkins.png");
+}
+
+.karnivale {
+  background-image: url("karnivale.png");
+}
+
+.randomQuotes {
+  background-image: url("randomquotes.png");
 }
