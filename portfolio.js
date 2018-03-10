@@ -17,19 +17,26 @@ $(document).ready(function(){
     }
   });
 
-  // Nav element highlight toggle
+  // Nav element highlight toggle + dynamic style changes
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 600) {
-        $("#proyectos").addClass("selected");
+        $("#proyectos").addClass("selected2");
         $("#about").removeClass("selected");
+        $(".container-bio").css("background-color", "#017C69");
+        $(".bio-profiles").css("background-color", "#003e34");
+        $(".bio-name span").css("color", "#b2d7d2");
     } else {
-        $("#proyectos").removeClass("selected");
+        $("#proyectos").removeClass("selected2");
         $("#about").addClass("selected");
+        $(".container-bio").css("background-color", "#0288cf");
+        $(".bio-profiles").css("background-color", "#01517c");
+        $(".bio-name span").css("color", "#99cfeb");
     }
   });
 
+  // Project detail containers (.hover) - toggling opacity on mouseover
   var hover = $(".hover");
   for (var i = 0; i < hover.length; i++) {
         hover[i].addEventListener('mouseover', function() {

@@ -42,6 +42,12 @@ body {
           "bio bio main main main main"
           "bio bio main main main main";
   background-color: #f6f6f6;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 div.container-bio {
@@ -50,10 +56,10 @@ div.container-bio {
   width: 30%;
   text-align: center;
   position: fixed;
-  background-color: #f6f6f6;
   background-color: #0288cf;
   color: #f6f6f6;
   z-index: 50;
+  transition: all 300ms ease-in;
 }
 
 div.bio-photo {
@@ -81,11 +87,12 @@ div.bio-photo {
   left: 0;
   right: 0;
   display: flex;
-  height: 10%;
+  height: 12%;
   align-items: center;
   justify-content: space-around;
-  font-size: 2em;
+  font-size: 1.7em;
   background-color: #01517c;
+  transition: all 400ms ease-in;
 }
 
 .bio-profiles a:hover {
@@ -119,6 +126,11 @@ nav a h3 {
 
 .selected {
   box-shadow: 0px 10px 0px #fc8a50;
+  opacity: 1;
+}
+
+.selected2 {
+  box-shadow: 0px 10px 0px 	#02c8aa;
   opacity: 1;
 }
 
@@ -187,7 +199,7 @@ article.proyectos {
 }
 
 .portfolio-page {
-  min-height: 65%;
+  min-height: 70%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -207,22 +219,31 @@ article.proyectos {
 }
 
 .hover {
-  background-color: rgba(32, 32, 32, .9);
+  background-color: rgba(32, 32, 32, .95);
   height: 400px;
   width: 100%;
   opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  transition: all 100ms ease;
+  transition: all 400ms ease;
   color: #fafafa;
   text-align: center;
   overflow: hidden;
 }
 
-div.hover p, div.hover h3 {
-  margin-left: 20px;
-  opacity: 1;
+div.hover h3 {
+  padding: 10%;
+}
+
+div.hover p {
+  margin: 5%;
+}
+
+.popshuvit {
+  background-image: url("popshuvit.png");
+}
+
+.aRattel {
+  background-image: url("arattel-tarjeta-nodata.png");
+  background-size: contain;
 }
 
 .homunculus {
