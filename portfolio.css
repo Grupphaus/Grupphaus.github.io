@@ -41,7 +41,7 @@ body {
           "bio bio main main main main"
           "bio bio main main main main"
           "bio bio main main main main";
-  background-color: #fafafa;
+  background-color: #f6f6f6;
 }
 
 div.container-bio {
@@ -50,9 +50,9 @@ div.container-bio {
   width: 30%;
   text-align: center;
   position: fixed;
-  background-color: #fafafa;
+  background-color: #f6f6f6;
   background-color: #0288cf;
-  color: #fafafa;
+  color: #f6f6f6;
   z-index: 50;
 }
 
@@ -101,7 +101,7 @@ nav {
   width: 100%;
   z-index: 5;
   overflow: hidden;
-  background-color: #fafafa;
+  background-color: #f6f6f6;
   position: fixed;
   top: 0;
   padding: 1%;
@@ -109,16 +109,22 @@ nav {
 
 nav a {
   margin: 0 6%;
+  transition: all 1s ease-in;
+}
+
+nav a h3 {
+  opacity: .6;
+  transition: all 300ms ease-in;
 }
 
 .selected {
   box-shadow: 0px 10px 0px #fc8a50;
+  opacity: 1;
 }
 
 main {
   grid-area: main;
   height: 100%;
-  /* overflow: auto; */
   scroll-behavior: smooth;
 }
 
@@ -185,16 +191,38 @@ article.proyectos {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   margin: 5%;
-  box-shadow: 10px 10px 1px #51696d;
-  border: 2px solid #51696d;
-  transition: all 500ms ease-in-out;
+  box-shadow: 5px 5px #51696d;
+  transition: all 300ms ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .portfolio-page:hover {
   transform: scale(1.05);
-  border: 0px solid #fafafa;
-  box-shadow: inset 1px 1px 1em #191919 ;
+  box-shadow: inset 0px 0px .8em #191919;
+}
+
+.hover {
+  background-color: rgba(32, 32, 32, .9);
+  height: 400px;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 100ms ease;
+  color: #fafafa;
+  text-align: center;
+  overflow: hidden;
+}
+
+div.hover p, div.hover h3 {
+  margin-left: 20px;
+  opacity: 1;
 }
 
 .homunculus {
