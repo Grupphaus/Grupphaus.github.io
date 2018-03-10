@@ -195,7 +195,7 @@ article.proyectos {
   align-items: center;
   justify-content: center;
   overflow: visible;
-  padding-top: 5%;
+  /* padding-top: 5%; */
 }
 
 .portfolio-page {
@@ -260,4 +260,10 @@ div.hover p {
 
 .randomQuotes {
   background-image: url("randomquotes.png");
+}
+
+.narciso {
+  background-image: url("narciso.png");
+  background-size: contain;
+  background-color: #323232;
 }
