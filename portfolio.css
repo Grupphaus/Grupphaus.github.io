@@ -320,7 +320,7 @@ div.hover p {
 
   .bio-name {
     position: relative;
-    bottom: 25px;
+    bottom: 30px;
   }
 
   .bio-profiles {
@@ -336,11 +336,11 @@ div.hover p {
   }
 
   .about {
-    margin: 5% 5% 50% 5%;
+    margin: 3% 5% 50% 5%;
   }
 
   .technologies {
-    margin-top: 8.33%;
+    margin-top: 10%;
   }
 
   article.proyectos {
@@ -367,11 +367,11 @@ div.hover p {
   }
 
   .about {
-    margin-top: 0;
+    margin-top: 1%;
   }
 
   .technologies {
-    margin-top: 5%;
+    margin-top: 8.33%;
   }
 }
 
@@ -393,7 +393,7 @@ div.hover p {
   .bio-profiles {
     height: 55px;
     transition: all 200ms ease-in;
-    font-size: 1.5em;
+    font-size: 1.6em;
     height: 50px;
   }
 
@@ -425,11 +425,12 @@ div.hover p {
   }
 
   div.container-bio {
-    top: 0;
+    height: 115px;
   }
 
   .bio-name {
-    font-size: 1.2em;
+    font-size: 1.15em;
+    bottom: 20px;
   }
 
   .bio-profiles {
@@ -438,6 +439,7 @@ div.hover p {
 
   .about {
     margin-top: 0;
+    min-height: 150px;
   }
 
   .intro h2 {
