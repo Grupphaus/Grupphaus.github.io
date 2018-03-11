@@ -3,7 +3,6 @@
   /* border: 1px solid green; */
   margin: 0;
   padding: 0;
-  transition: all 300ms ease-in;
 }
 
 html {
@@ -17,10 +16,12 @@ h1,
 h2,
 h3 {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 1.6em;
 }
 
 p {
   font-family: "Nunito", sans-sans-serif;
+  font-size: 1.4em;
 }
 
 a {
@@ -28,6 +29,7 @@ a {
   text-decoration: none;
   color: inherit;
   background-color: transparent;
+  transition: none;
 }
 
 img {
@@ -37,6 +39,7 @@ img {
 body {
   height: 100%;
   width: 100%;
+  font-size: 80%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -85,10 +88,15 @@ div.bio-photo {
 .bio-name {
   padding: 3%;
   text-shadow: 1px 1px 1px #014467;
+  font-size: 1.6em;
 }
 
 .bio-name span {
   color: #99cfeb;
+}
+
+.bio-name p {
+  font-size: .9em;
 }
 
 .bio-profiles {
@@ -100,7 +108,7 @@ div.bio-photo {
   height: 12%;
   align-items: center;
   justify-content: space-around;
-  font-size: 1.7em;
+  font-size: 2.5em;
   background-color: #01517c;
   transition: all 400ms ease-in;
 }
@@ -170,7 +178,7 @@ main {
 }
 
 .technologies {
-  font-size: 4em;
+  font-size: 5em;
   margin: 15% 0;
   display: flex;
   align-items: center;
@@ -290,6 +298,7 @@ div.hover p {
             "main main main main main main"
             "main main main main main main"
             "main main main main main main";
+    font-size: 100%;
   }
 
   div.container-bio {
@@ -310,14 +319,12 @@ div.hover p {
   }
 
   .bio-name {
-    font-size: 1em;
     position: relative;
     bottom: 25px;
   }
 
   .bio-profiles {
     height: 75px;
-    font-size: 1.6em;
   }
 
   nav {
@@ -329,7 +336,7 @@ div.hover p {
   }
 
   .about {
-    margin: 8.33% 5% 50% 5%;
+    margin: 5% 5% 50% 5%;
   }
 
   .technologies {
@@ -343,7 +350,7 @@ div.hover p {
 
 @media screen and (max-width: 800px) {
   div.container-bio {
-    height: 185px;
+    height: 200px;
     padding: 0;
   }
 
@@ -352,17 +359,14 @@ div.hover p {
   }
 
   .bio-name {
-    font-size: 1.1em;
     bottom: 35px;
   }
 
   .bio-profiles {
-    font-size: 1.7em;
     height: 75px;
   }
 
   .about {
-    font-size: 1.2em;
     margin-top: 0;
   }
 
@@ -372,67 +376,60 @@ div.hover p {
 }
 
 @media screen and (max-width: 640px), screen and (max-height: 414px) {
+  body {
+    font-size: 75%;
+  }
+
   div.container-bio {
-    height: 135px;
+    height: 125px;
     transition: all 200ms ease-in;
-    display: flex;
   }
 
   .bio-name {
-    font-size: 1.20em;
     margin-top: 0;
     bottom: 25px;
-  }
-
-  .bio-name p {
-    display: none;
   }
 
   .bio-profiles {
     height: 55px;
     transition: all 200ms ease-in;
-    font-size: 1.3em;
+    font-size: 1.5em;
     height: 50px;
   }
 
   .about:not(.technologíes) {
-    font-size: 1.1em;
-  }
-
-  .intro {
-    font-size: .9em;
+    padding-top: 0;
   }
 
   .intro h2 {
-    margin-bottom: 5px;
+    margin: 5px 0;
+    display: none;
   }
 
-  .hidden {
-    /* height: 15%; */
+  .intro p {
+    font-size: 1.3em;
   }
+
+  .about {
+    margin-top: 5%;
+  }
+
+  /* .hidden {
+
+  } */
 }
 
 @media screen and (max-width: 414px) {
-  /* body {
-    grid-template-areas:
-            "bio bio bio bio bio bio"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main";
-  } */
+  body {
+    font-size: 90%;
+  }
 
   div.container-bio {
-    height: 125px;
     top: 0;
   }
 
   .bio-name {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .bio-profiles {
@@ -440,17 +437,16 @@ div.hover p {
   }
 
   .about {
-    font-size: .75em;
-    padding-top: 3%;
+    margin-top: 0;
   }
 
   .intro h2 {
-    margin-bottom: 0;
-    font-size: 1.3em;
+    margin: 0;
+    font-size: 1.35em;
   }
 
   .intro p {
-    font-size: .9em;
+    font-size: .95em;
   }
 
   .intro p:last-child {
@@ -458,6 +454,6 @@ div.hover p {
   }
 
   .technologies {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
