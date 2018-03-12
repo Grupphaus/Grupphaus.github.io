@@ -17,6 +17,10 @@ $(document).ready(function(){
     }
   });
 
+  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+        $('.intro').css("margin-top", "35px");
+    }
+
   // Nav element highlight toggle + dynamic style changes on smaller viewports
   $(window).scroll(function() {
     var scrollPos = $(window).scrollTop();
@@ -81,7 +85,7 @@ $(document).ready(function(){
           $(".bio-profiles").css("height", "12%");
           $(".bio-name").css("opacity", "1");
         } else if ($(window).width() > 800 && $(window).width <= 960) {
-            $(".container-bio").css("height", "225px");
+            $(".container-bio").css("height", "200px");
 
         }
       });

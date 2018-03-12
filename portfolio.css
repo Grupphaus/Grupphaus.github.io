@@ -309,7 +309,7 @@ div.hover p {
 
   div.container-bio {
     width: 100%;
-    height: 225px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -421,6 +421,30 @@ div.hover p {
   .about {
     margin-top: 5%;
   }
+
+  .portfolio-page {
+    height: 600px;
+  }
+
+  .popshuvit {
+    background-image: url("popshuvit-mobile.png");
+    background-position: top;
+  }
+
+  .homunculus {
+    background-image: url("homunculus-mobile.png");
+    background-position: top;
+  }
+
+  .karnivale {
+    background-image: url("karnivale-mobile.png");
+    background-position: top;
+  }
+
+  .randomQuotes {
+    background-image: url("randomquotes-mobile.png");
+    background-position: top;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -461,5 +485,6 @@ div.hover p {
     font-size: 3em;
     margin-top: 10%;
     margin: 10% 0;
+    width: 100%;
   }
 }
