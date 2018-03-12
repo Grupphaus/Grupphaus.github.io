@@ -350,6 +350,10 @@ div.hover p {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    font-size: 90%;
+  }
+  
   div.container-bio {
     height: 200px;
     padding: 0;
@@ -418,8 +422,8 @@ div.hover p {
     font-size: 1.3em;
   }
 
-  .about {
-    margin-top: 5%;
+  .intro {
+    margin-top: 10%;
   }
 
   .portfolio-page {
@@ -449,7 +453,7 @@ div.hover p {
 
 @media screen and (max-width: 414px) {
   body {
-    font-size: 90%;
+    font-size: 85%;
   }
 
   div.container-bio {
@@ -463,10 +467,6 @@ div.hover p {
 
   .bio-profiles {
     height: 40px;
-  }
-
-  main {
-    padding-top: 5%;
   }
 
   .intro h2 {
@@ -483,7 +483,6 @@ div.hover p {
 
   .technologies {
     font-size: 3em;
-    margin-top: 10%;
     margin: 10% 0;
     width: 100%;
   }

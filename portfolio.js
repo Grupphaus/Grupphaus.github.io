@@ -18,7 +18,7 @@ $(document).ready(function(){
   });
 
   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        $(".intro").css("margin-top", "150px");
+        $(".intro").css("margin-top", "65px");
         $(".technologies").css("margin", "100px 0");
     }
 
@@ -45,11 +45,11 @@ $(document).ready(function(){
       }
 
       // Header transform on scroll position - 800px / 640px range
-      if (scrollPos >= 500 && $(window).width() <= 800 && $(window).width() > 640 ) {
+      if (scrollPos >= 200 && $(window).width() <= 800 && $(window).width() > 640 ) {
         $(".container-bio").css("height", "75px");
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
-      } else if (scrollPos < 500 && $(window).width() <= 800 && $(window).width() > 640) {
+      } else if (scrollPos < 100 && $(window).width() <= 800 && $(window).width() > 640) {
         $(".container-bio").css("height", "200px");
         $(".bio-profiles").css("height", "75px");
         $(".bio-name").css("opacity", "1");
@@ -57,11 +57,11 @@ $(document).ready(function(){
       }
 
       // Header transform on scroll position - 640px / 414px range
-      if (scrollPos >= 500 && $(window).width() <= 640 && $(window).width() > 414 ) {
+      if (scrollPos >= 100 && $(window).width() <= 640 && $(window).width() > 414 ) {
         $(".container-bio").css("height", "55px");
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
-      } else if (scrollPos < 500 && $(window).width() <= 640 && $(window).width() > 414) {
+      } else if (scrollPos < 100 && $(window).width() <= 640 && $(window).width() > 414) {
         $(".container-bio").css("height", "130px");
         $(".bio-profiles").css("height", "55px");
         $(".bio-name").css("opacity", "1");
@@ -69,11 +69,11 @@ $(document).ready(function(){
       }
 
       // Header transform on scroll position - 414px and less
-      if (scrollPos >= 500 && $(window).width() <= 414) {
+      if (scrollPos >= 75 && $(window).width() <= 414) {
         $(".container-bio").css("height", "40px");
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
-      } else if (scrollPos < 500 && $(window).width() <= 414) {
+      } else if (scrollPos < 75 && $(window).width() <= 414) {
         $(".container-bio").css("height", "100px");
         $(".bio-profiles").css("height", "40px");
         $(".bio-name").css("opacity", "1");
