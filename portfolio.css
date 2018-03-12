@@ -441,14 +441,12 @@ div.hover p {
     height: 45px;
   }
 
-  .about {
-    margin-top: 0;
-    min-height: 150px;
+  main {
+    padding-top: 5%;
   }
 
   .intro h2 {
-    margin: 0;
-    font-size: 1.35em;
+    display: none;
   }
 
   .intro p {
@@ -461,5 +459,7 @@ div.hover p {
 
   .technologies {
     font-size: 3em;
+    margin-top: 10%;
+    margin: 10% 0;
   }
 }
