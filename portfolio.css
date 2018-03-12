@@ -246,18 +246,31 @@ article.proyectos {
   height: 400px;
   width: 100%;
   opacity: 0;
-  transition: all 500ms ease;
+  transition: all 400ms ease;
   color: #fafafa;
   text-align: center;
   overflow: hidden;
-}
-
-div.hover h3 {
-  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 div.hover p {
-  margin: 5%;
+  /* margin: 5%; */
+}
+
+.project-description {
+  font-size: .8em;
+  text-shadow: 2px 2px #191919;
+}
+
+.project-description a {
+  opacity: .5;
+  color: #FFD700;
+  font-weight: 700;
+  /* padding: 3%; */
+  /* background-color: rgba(255, 0, 0, 0.3); */
 }
 
 .popshuvit {
@@ -290,6 +303,8 @@ div.hover p {
   background-size: contain;
   background-color: #323232;
 }
+
+/*----- MEDIA QUERIES -----*/
 
 @media screen and (max-width: 960px) {
   body {
@@ -353,7 +368,7 @@ div.hover p {
   body {
     font-size: 90%;
   }
-  
+
   div.container-bio {
     height: 200px;
     padding: 0;
@@ -369,6 +384,10 @@ div.hover p {
 
   .technologies {
     margin-top: 8.33%;
+  }
+
+  .hover {
+    padding: 0 20%;
   }
 }
 
@@ -411,6 +430,7 @@ div.hover p {
 
   .technologies {
     width: 85%;
+    margin: 100px 0;
   }
 
   .intro h2 {
@@ -428,6 +448,10 @@ div.hover p {
 
   .portfolio-page {
     height: 600px;
+  }
+
+  .hover p {
+    font-size: 1.2em;
   }
 
   .popshuvit {
@@ -483,7 +507,24 @@ div.hover p {
 
   .technologies {
     font-size: 3em;
-    margin: 10% 0;
+    margin: 50px 0;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    grid-template-areas:
+        "bio bio bio bio bio bio"
+        ".    .   .   .   .   ."
+        ".    .   .   .   .   . "
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main";
+        font-size: 80%;
   }
 }

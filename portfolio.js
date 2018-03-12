@@ -17,11 +17,6 @@ $(document).ready(function(){
     }
   });
 
-  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        $(".intro").css("margin-top", "65px");
-        $(".technologies").css("margin", "100px 0");
-    }
-
   // Nav element highlight toggle + dynamic style changes on smaller viewports
   $(window).scroll(function() {
     var scrollPos = $(window).scrollTop();
