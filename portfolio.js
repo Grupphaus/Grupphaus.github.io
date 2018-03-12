@@ -18,7 +18,7 @@ $(document).ready(function(){
   });
 
   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        $('.intro').css("margin-top", "35px");
+        $('.intro').css("margin-top", "100px");
     }
 
   // Nav element highlight toggle + dynamic style changes on smaller viewports
