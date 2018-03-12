@@ -42,9 +42,10 @@ body {
   font-size: 80%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   grid-template-areas:
           "bio bio nav nav nav nav"
+          "bio bio main main main main"
           "bio bio main main main main"
           "bio bio main main main main"
           "bio bio main main main main"
@@ -71,7 +72,7 @@ div.container-bio {
   background-color: #0288cf;
   color: #f6f6f6;
   z-index: 50;
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 div.bio-photo {
@@ -89,6 +90,7 @@ div.bio-photo {
   padding: 3%;
   text-shadow: 1px 1px 1px #014467;
   font-size: 1.6em;
+  transition: opacity 200ms ease-in-out;
 }
 
 .bio-name span {
@@ -110,7 +112,7 @@ div.bio-photo {
   justify-content: space-around;
   font-size: 2.5em;
   background-color: #01517c;
-  transition: all 400ms ease-in;
+  transition: all 300ms ease-in;
 }
 
 .bio-profiles a:hover {
@@ -130,11 +132,12 @@ nav {
   position: fixed;
   top: 0;
   padding: 1%;
+  transition: all 300ms ease-in;
 }
 
 nav a {
   margin: 0 6%;
-  transition: all 1s ease-in;
+  /* transition: all 1s ease-in; */
 }
 
 nav a h3 {
@@ -160,29 +163,34 @@ main {
 
 .about {
   height: 100%;
-  padding-top: 8.33%;
-  margin-bottom: 20%;
+  margin-bottom: 25%;
   margin-right: 25%;
-}
-
-.intro {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
-.intro h2 {
+.intro {
   align-self: flex-start;
-  margin-bottom: 10px;
+}
+
+.intro h2:first-of-type {
+  margin-top: 15px;
+}
+
+.intro h2:nth-of-type(2) {
+  margin-bottom: 15px;
 }
 
 .technologies {
+  align-self: center;
   font-size: 5em;
-  margin: 15% 0;
+  margin: 10% 0;
+  width: 65%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .fa-html5 {
@@ -241,7 +249,7 @@ article.proyectos {
   height: 400px;
   width: 100%;
   opacity: 0;
-  transition: all 400ms ease;
+  transition: all 500ms ease;
   color: #fafafa;
   text-align: center;
   overflow: hidden;
@@ -291,6 +299,7 @@ div.hover p {
     grid-template-areas:
             "bio bio bio bio bio bio"
             "bio bio bio bio bio bio"
+            ".    .   .   .   .   ."
             "main main main main main main"
             "main main main main main main"
             "main main main main main main"
@@ -303,11 +312,11 @@ div.hover p {
 
   div.container-bio {
     width: 100%;
-    height: 250px;
+    height: 225px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5%;
+    /* padding: 5%; */
   }
 
   div.bio-photo {
@@ -315,7 +324,7 @@ div.hover p {
     width: 115px;
     margin: 0;
     position: relative;
-    bottom: 25%;
+    bottom: 16.66%;
   }
 
   .bio-name {
@@ -366,10 +375,6 @@ div.hover p {
     height: 75px;
   }
 
-  .about {
-    margin-top: 1%;
-  }
-
   .technologies {
     margin-top: 8.33%;
   }
@@ -377,12 +382,22 @@ div.hover p {
 
 @media screen and (max-width: 640px), screen and (max-height: 414px) {
   body {
+    grid-template-areas:
+            "bio bio bio bio bio bio"
+            ".    .   .   .   .   ."
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main";
     font-size: 75%;
   }
 
   div.container-bio {
-    height: 125px;
-    transition: all 200ms ease-in;
+    height: 130px;
   }
 
   .bio-name {
@@ -391,14 +406,17 @@ div.hover p {
   }
 
   .bio-profiles {
-    height: 55px;
     transition: all 200ms ease-in;
-    font-size: 1.6em;
-    height: 50px;
+    font-size: 1.7em;
+    height: 55px;
   }
 
   .about:not(.technologíes) {
     padding-top: 0;
+  }
+
+  .technologies {
+    width: 85%;
   }
 
   .intro h2 {
@@ -414,9 +432,9 @@ div.hover p {
     margin-top: 5%;
   }
 
-  /* .hidden {
-
-  } */
+  .hidden {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 414px) {

@@ -17,75 +17,83 @@ $(document).ready(function(){
     }
   });
 
-  // Nav element highlight toggle + dynamic style changes
+  // Nav element highlight toggle + dynamic style changes on smaller viewports
   $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+    var scrollPos = $(window).scrollTop();
 
-    if (scroll >= 500) {
+      if (scrollPos >= 500) {
         $("#proyectos").addClass("selected2");
         $("#about").removeClass("selected");
         $(".container-bio").css("background-color", "#017C69");
         $(".bio-profiles").css("background-color", "#003e34");
         $(".bio-name span").css("color", "#b2d7d2");
+        $("nav").css("box-shadow", "0 2px 2px -2px gray");
 
-        // if ($(window).width() <= 640) {
-        //   $("div.container-bio").toggleClass("hidden");
-        // }
-        //
-        // if ($(".bio-name").hasClass("hidden")) {
-        //   $(".bio-profiles").css("height", "100%");
-        //   $(".bio-name").display("none");
-        // } else if ($(".bio-name").hasClass("hidden") && $(window).height() > 360 && $(window).width() <= 640) {
-        //   $(".container-bio").css("height", "10%");
-        //   $(".bio-profiles").css("height", "100%");
-        // } else if ($(window).width() <= 640) {
-        //   if ($(window).height() <= 360) {
-        //     $(".container-bio").css("height", "40%");
-        //     $(".bio-profiles").css("height", "40%");
-        //   } else {
-        //     $(".container-bio").css("height", "25%");
-        //     $(".bio-profiles").css("height", "40%");
-        //   }
-        // }
+      } else {
 
-    } else {
         $("#proyectos").removeClass("selected2");
         $("#about").addClass("selected");
         $(".container-bio").css("background-color", "#0288cf");
         $(".bio-profiles").css("background-color", "#01517c");
         $(".bio-name span").css("color", "#99cfeb");
-
-        // if ($(window).width() <= 640) {
-        //   $(".bio-name").removeClass("hidden");
-        // }
-        //
-        // if ($(".bio-name").hasClass("hidden") && $(window).height() <= 360) {
-        //   $(".container-bio").css("height", "15%");
-        //   $(".bio-profiles").css("height", "100%");
-        // } else if ($(".bio-name").hasClass("hidden") && $(window).height() > 360 && $(window).width() <= 640) {
-        //   $(".container-bio").css("height", "10%");
-        //   $(".bio-profiles").css("height", "100%");
-        // } else if ($(window).width() <= 640) {
-        //   if ($(window).height() <= 360) {
-        //     $(".container-bio").css("height", "40%");
-        //     $(".bio-profiles").css("height", "40%");
-        //   } else {
-        //     $(".container-bio").css("height", "25%");
-        //     $(".bio-profiles").css("height", "40%");
-        //   }
-        // }
+        $("nav").css("box-shadow", "none");
     }
+
+      // Header transform on scroll position - 800px / 640px range
+      if (scrollPos >= 500 && $(window).width() <= 800 && $(window).width() > 640 ) {
+
+        $(".container-bio").css("height", "75px");
+        $(".bio-profiles").css("height", "100%");
+        $(".bio-name").css("opacity", "0");
+
+      } else if (scrollPos < 500 && $(window).width() <= 800 && $(window).width() > 640) {
+
+        $(".container-bio").css("height", "200px");
+        $(".bio-profiles").css("height", "75px");
+        $(".bio-name").css("opacity", "1");
+
+      }
+      // Header transform on scroll position - 640px / 414px range
+      if (scrollPos >= 500 && $(window).width() <= 640 && $(window).width() > 414 ) {
+
+        $(".container-bio").css("height", "55px");
+        $(".bio-profiles").css("height", "100%");
+        $(".bio-name").css("opacity", "0");
+
+      } else if (scrollPos < 500 && $(window).width() <= 640 && $(window).width() > 414) {
+
+        $(".container-bio").css("height", "130px");
+        $(".bio-profiles").css("height", "55px");
+        $(".bio-name").css("opacity", "1");
+
+      }
+      // Header transform on scroll position - 414px and less
+      if (scrollPos >= 500 && $(window).width() <= 414) {
+
+        $(".container-bio").css("height", "45px");
+        $(".bio-profiles").css("height", "100%");
+        $(".bio-name").css("opacity", "0");
+
+      } else if (scrollPos < 500 && $(window).width() <= 414) {
+
+        $(".container-bio").css("height", "115px");
+        $(".bio-profiles").css("height", "45px");
+        $(".bio-name").css("opacity", "1");
+
+      }
 
   });
 
   // Project detail containers (.hover) - toggling opacity on mouseover
   var hover = $(".hover");
   for (var i = 0; i < hover.length; i++) {
-        hover[i].addEventListener('mouseover', function() {
-          this.style.opacity = "1";
-        });
-        hover[i].addEventListener('mouseleave', function() {
-          this.style.opacity = "0";
-        });
-    }
+
+    hover[i].addEventListener('mouseover', function() {
+      this.style.opacity = "1";
+    });
+    hover[i].addEventListener('mouseleave', function() {
+      this.style.opacity = "0";
+    });
+
+  }
 });
