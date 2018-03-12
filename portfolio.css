@@ -70,7 +70,7 @@ div.container-bio {
   background-color: #0288cf;
   color: #f6f6f6;
   z-index: 50;
-  transition: all 200ms ease-in;
+  transition: all 200ms ease;
 }
 
 div.bio-photo {
@@ -88,7 +88,7 @@ div.bio-photo {
   padding: 3%;
   text-shadow: 1px 1px 1px #014467;
   font-size: 1.4em;
-  transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease;
 }
 
 .bio-name span {
@@ -110,7 +110,7 @@ div.bio-photo {
   justify-content: space-around;
   font-size: 2.5em;
   background-color: #01517c;
-  transition: all 300ms ease-in;
+  transition: all 300ms ease;
 }
 
 .bio-profiles a:hover {
@@ -130,7 +130,7 @@ nav {
   position: fixed;
   top: 0;
   padding: 1%;
-  transition: all 300ms ease-in;
+  transition: all 300ms ease;
 }
 
 nav a {
@@ -139,7 +139,7 @@ nav a {
 
 nav a h3 {
   opacity: .6;
-  transition: all 300ms ease-in;
+  transition: all 300ms ease;
 }
 
 .selected {
@@ -229,7 +229,7 @@ article.proyectos {
   background-position: center center;
   margin: 5%;
   box-shadow: 5px 5px #51696d;
-  transition: all 300ms ease-in;
+  transition: all 300ms ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -396,7 +396,7 @@ div.hover p {
   }
 
   .bio-profiles {
-    transition: all 200ms ease-in;
+    transition: all 200ms ease;
     font-size: 1.7em;
     height: 55px;
   }
@@ -429,16 +429,16 @@ div.hover p {
   }
 
   div.container-bio {
-    height: 115px;
+    height: 100px;
   }
 
   .bio-name {
-    font-size: 1.15em;
+    font-size: 1em;
     bottom: 20px;
   }
 
   .bio-profiles {
-    height: 45px;
+    height: 40px;
   }
 
   main {

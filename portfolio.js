@@ -65,16 +65,16 @@ $(document).ready(function(){
 
       // Header transform on scroll position - 414px and less
       if (scrollPos >= 500 && $(window).width() <= 414) {
-        $(".container-bio").css("height", "45px");
+        $(".container-bio").css("height", "40px");
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
       } else if (scrollPos < 500 && $(window).width() <= 414) {
-        $(".container-bio").css("height", "115px");
-        $(".bio-profiles").css("height", "45px");
+        $(".container-bio").css("height", "100px");
+        $(".bio-profiles").css("height", "40px");
         $(".bio-name").css("opacity", "1");
 
       }
-
+      // Handles brwoser resizing (kinda?)
       $(window).resize(function() {
        if ($(window).width() > 960) {
           $(".container-bio").css("height", "100%");
@@ -82,7 +82,7 @@ $(document).ready(function(){
           $(".bio-name").css("opacity", "1");
         } else if ($(window).width() > 800 && $(window).width <= 960) {
             $(".container-bio").css("height", "225px");
-            
+
         }
       });
   });
