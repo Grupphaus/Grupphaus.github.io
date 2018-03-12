@@ -17,6 +17,24 @@ $(document).ready(function(){
     }
   });
 
+  // Project detail containers (.hover) - toggling opacity and positioning
+  $(".portfolio-page").click(function () {
+    $(".hover").toggleClass("active");
+  });
+
+  // Handles browser resizing (does it?)
+  $(window).resize(function() {
+
+   if ($(window).width() > 960) {
+      $(".container-bio").css("height", "100%");
+      $(".bio-profiles").css("height", "12%");
+      $(".bio-name").css("opacity", "1");
+    } else if ($(window).width() > 800 && $(window).width <= 960) {
+        $(".container-bio").css("height", "200px");
+
+    }
+  });
+
   // Nav element highlight toggle + dynamic style changes on smaller viewports
   $(window).scroll(function() {
     var scrollPos = $(window).scrollTop();
@@ -74,30 +92,5 @@ $(document).ready(function(){
         $(".bio-name").css("opacity", "1");
 
       }
-      
-      // Handles brwoser resizing (kinda?)
-      $(window).resize(function() {
-       if ($(window).width() > 960) {
-          $(".container-bio").css("height", "100%");
-          $(".bio-profiles").css("height", "12%");
-          $(".bio-name").css("opacity", "1");
-        } else if ($(window).width() > 800 && $(window).width <= 960) {
-            $(".container-bio").css("height", "200px");
-
-        }
-      });
   });
-
-  // Project detail containers (.hover) - toggling opacity on mouseover/touch
-  var hover = $(".hover");
-  for (var i = 0; i < hover.length; i++) {
-
-    hover[i].addEventListener('mouseover', function() {
-      this.style.opacity = "1";
-    });
-    hover[i].addEventListener('mouseleave', function() {
-      this.style.opacity = "0";
-    });
-
-  }
 });
