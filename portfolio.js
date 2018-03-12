@@ -18,7 +18,8 @@ $(document).ready(function(){
   });
 
   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        $('.intro').css("margin-top", "100px");
+        $(".intro").css("margin-top", "150px");
+        $(".technologies").css("margin", "100px 0");
     }
 
   // Nav element highlight toggle + dynamic style changes on smaller viewports
