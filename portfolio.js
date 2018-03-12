@@ -37,54 +37,57 @@ $(document).ready(function(){
         $(".bio-profiles").css("background-color", "#01517c");
         $(".bio-name span").css("color", "#99cfeb");
         $("nav").css("box-shadow", "none");
-    }
+      }
 
       // Header transform on scroll position - 800px / 640px range
       if (scrollPos >= 500 && $(window).width() <= 800 && $(window).width() > 640 ) {
-
         $(".container-bio").css("height", "75px");
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
-
       } else if (scrollPos < 500 && $(window).width() <= 800 && $(window).width() > 640) {
-
         $(".container-bio").css("height", "200px");
         $(".bio-profiles").css("height", "75px");
         $(".bio-name").css("opacity", "1");
 
       }
+
       // Header transform on scroll position - 640px / 414px range
       if (scrollPos >= 500 && $(window).width() <= 640 && $(window).width() > 414 ) {
-
         $(".container-bio").css("height", "55px");
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
-
       } else if (scrollPos < 500 && $(window).width() <= 640 && $(window).width() > 414) {
-
         $(".container-bio").css("height", "130px");
         $(".bio-profiles").css("height", "55px");
         $(".bio-name").css("opacity", "1");
 
       }
+
       // Header transform on scroll position - 414px and less
       if (scrollPos >= 500 && $(window).width() <= 414) {
-
         $(".container-bio").css("height", "45px");
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
-
       } else if (scrollPos < 500 && $(window).width() <= 414) {
-
         $(".container-bio").css("height", "115px");
         $(".bio-profiles").css("height", "45px");
         $(".bio-name").css("opacity", "1");
 
       }
 
+      $(window).resize(function() {
+       if ($(window).width() > 960) {
+          $(".container-bio").css("height", "100%");
+          $(".bio-profiles").css("height", "12%");
+          $(".bio-name").css("opacity", "1");
+        } else if ($(window).width() > 800 && $(window).width <= 960) {
+            $(".container-bio").css("height", "225px");
+            
+        }
+      });
   });
 
-  // Project detail containers (.hover) - toggling opacity on mouseover
+  // Project detail containers (.hover) - toggling opacity on mouseover/touch
   var hover = $(".hover");
   for (var i = 0; i < hover.length; i++) {
 

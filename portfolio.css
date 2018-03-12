@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /* border: 1px solid green; */
   margin: 0;
   padding: 0;
 }
@@ -11,7 +10,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-
 h1,
 h2,
 h3 {
@@ -20,7 +18,7 @@ h3 {
 }
 
 p {
-  font-family: "Nunito", sans-sans-serif;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
   font-size: 1.4em;
 }
 
@@ -89,7 +87,7 @@ div.bio-photo {
 .bio-name {
   padding: 3%;
   text-shadow: 1px 1px 1px #014467;
-  font-size: 1.6em;
+  font-size: 1.4em;
   transition: opacity 200ms ease-in-out;
 }
 
@@ -137,7 +135,6 @@ nav {
 
 nav a {
   margin: 0 6%;
-  /* transition: all 1s ease-in; */
 }
 
 nav a h3 {
@@ -316,15 +313,10 @@ div.hover p {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 5%; */
   }
 
   div.bio-photo {
-    height: 115px;
-    width: 115px;
-    margin: 0;
-    position: relative;
-    bottom: 16.66%;
+    display: none;
   }
 
   .bio-name {
@@ -363,10 +355,6 @@ div.hover p {
     padding: 0;
   }
 
-  .bio-photo {
-    display: none;
-  }
-
   .bio-name {
     bottom: 35px;
   }
@@ -380,7 +368,9 @@ div.hover p {
   }
 }
 
-@media screen and (max-width: 640px), screen and (max-height: 414px) {
+/* , screen and (max-height: 414px) */
+
+@media screen and (max-width: 640px) {
   body {
     grid-template-areas:
             "bio bio bio bio bio bio"
@@ -430,10 +420,6 @@ div.hover p {
 
   .about {
     margin-top: 5%;
-  }
-
-  .hidden {
-    display: none;
   }
 }
 
