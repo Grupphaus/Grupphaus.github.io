@@ -647,6 +647,10 @@ article.proyectos {
     width: 100%;
   }
 
+  .portfolio-page {
+    height: 325px;
+  }
+
   .hover {
     text-align: left;
     padding: 0 10%;
@@ -656,7 +660,6 @@ article.proyectos {
   div.hover h3, .hover p, .project-description {
     align-self: flex-start;
     text-align: left;
-    /* left: 5%; */
   }
 }
 
