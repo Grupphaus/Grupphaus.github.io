@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -27,6 +28,8 @@ a {
   text-decoration: none;
   color: inherit;
   background-color: transparent;
+  -webkit-transition: none;
+  -o-transition: none;
   transition: none;
 }
 
@@ -38,10 +41,13 @@ body {
   height: 100%;
   width: 100%;
   font-size: 80%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-  grid-template-areas:
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: (1fr)[9];
+      grid-template-rows: repeat(9, 1fr);
+      grid-template-areas:
           "bio bio nav nav nav nav"
           "bio bio main main main main"
           "bio bio main main main main"
@@ -55,13 +61,16 @@ body {
   background-color: #f6f6f6;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-   -khtml-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
 div.container-bio {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 10;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: bio;
   height: 100%;
   width: 30%;
@@ -70,6 +79,8 @@ div.container-bio {
   background-color: #0288cf;
   color: #f6f6f6;
   z-index: 50;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
   transition: all 200ms ease;
 }
 
@@ -81,13 +92,16 @@ div.bio-photo {
   margin: 10% auto;
   margin-bottom: 5%;
   border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .bio-name {
   padding: 3%;
   text-shadow: 1px 1px 1px #014467;
   font-size: 1.4em;
+  -webkit-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
 }
 
@@ -104,25 +118,43 @@ div.bio-photo {
   bottom: 0;
   left: 0;
   right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 12%;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+      -ms-flex-pack: distribute;
+    justify-content: space-around;
   font-size: 2.5em;
   background-color: #01517c;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 .bio-profiles a:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
   color: #fc8a50;
 }
 
 nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
   grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+   -webkit-box-pack: end;
+      -ms-flex-pack: end;
+    justify-content: flex-end;
   width: 100%;
   z-index: 5;
   overflow: hidden;
@@ -130,6 +162,8 @@ nav {
   position: fixed;
   top: 0;
   padding: 1%;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
@@ -139,20 +173,28 @@ nav a {
 
 nav a h3 {
   opacity: .6;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 .selected {
-  box-shadow: 0px 10px 0px #fc8a50;
+  -webkit-box-shadow: 0px 10px 0px #fc8a50;
+          box-shadow: 0px 10px 0px #fc8a50;
   opacity: 1;
 }
 
 .selected2 {
-  box-shadow: 0px 10px 0px 	#02c8aa;
+  -webkit-box-shadow: 0px 10px 0px 	#02c8aa;
+          box-shadow: 0px 10px 0px 	#02c8aa;
   opacity: 1;
 }
 
 main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 9;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
   grid-area: main;
   height: 100%;
   scroll-behavior: smooth;
@@ -162,14 +204,24 @@ main {
   height: 100%;
   margin-bottom: 25%;
   margin-right: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
+  -webkit-box-align: start;
+     -ms-flex-align: start;
+        align-items: flex-start;
+   -webkit-box-pack: start;
+      -ms-flex-pack: start;
+    justify-content: flex-start;
+     -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
 }
 
 .intro {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .intro h2:first-of-type {
@@ -181,13 +233,20 @@ main {
 }
 
 .technologies {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   font-size: 5em;
   margin: 10% 0;
   width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+   -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .fa-html5 {
@@ -208,56 +267,100 @@ main {
 
 article {
   height: 100%;
+  padding-top: 10%;
 }
 
 article.proyectos {
   height: 100%;
   width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   overflow-x: auto;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+   -webkit-box-pack: center;
+      -ms-flex-pack: center;
+    justify-content: center;
   overflow: visible;
 }
 
 .portfolio-page {
-  min-height: 70%;
+  height: 700px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   margin: 5%;
-  box-shadow: 5px 5px #51696d;
+  -webkit-box-shadow: 5px 5px #51696d;
+          box-shadow: 5px 5px #51696d;
+  -webkit-transition: all 300ms ease;
+       -o-transition: all 300ms ease;
   transition: all 300ms ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+   -webkit-box-pack: center;
+      -ms-flex-pack: center;
+    justify-content: flex-start;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .portfolio-page:hover {
-  transform: scale(1.05);
-  box-shadow: inset 0px 0px .8em #191919;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: inset 0px 0px .8em #191919;
+          box-shadow: inset 0px 0px .8em #191919;
 }
 
 .hover {
-  background-color: rgba(32, 32, 32, .95);
-  height: 400px;
-  width: 100%;
+  background-color: rgba(46, 46, 46, .95);
+  height: 350px;
+  width: 65%;
   opacity: 0;
+  -webkit-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
   transition: all 400ms ease;
   color: #fafafa;
   text-align: center;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  text-shadow: 1px 1px #191919;
+  border-radius: 0 15px 15px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+      -webkit-box-align: center;
+         -ms-flex-align: center;
+            align-items: center;
+          -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
-div.hover p {
-  /* margin: 5%; */
+.ext {
+  color: #FFD700;
+  padding: 10px;
+  background-color: #252525;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #323232;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.ext:hover {
+  color: #fafafa;
+  box-shadow: 0px 0px 5px #92e6e6;
 }
 
 .project-description {
@@ -269,8 +372,6 @@ div.hover p {
   opacity: .5;
   color: #FFD700;
   font-weight: 700;
-  /* padding: 3%; */
-  /* background-color: rgba(255, 0, 0, 0.3); */
 }
 
 .popshuvit {
@@ -308,7 +409,7 @@ div.hover p {
 
 @media screen and (max-width: 960px) {
   body {
-    grid-template-areas:
+        grid-template-areas:
             "bio bio bio bio bio bio"
             "bio bio bio bio bio bio"
             ".    .   .   .   .   ."
@@ -325,9 +426,15 @@ div.hover p {
   div.container-bio {
     width: 100%;
     height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
+     -webkit-box-pack: center;
+        -ms-flex-pack: center;
+      justify-content: center;
   }
 
   div.bio-photo {
@@ -383,11 +490,18 @@ div.hover p {
   }
 
   .technologies {
-    margin-top: 8.33%;
+    margin-top: 15%;
   }
 
   .hover {
     padding: 0 20%;
+    width: 100%;
+  }
+
+  .ext {
+    align-self: flex-start;
+    position: relative;
+    left: 5%;
   }
 }
 
@@ -395,7 +509,7 @@ div.hover p {
 
 @media screen and (max-width: 640px) {
   body {
-    grid-template-areas:
+        grid-template-areas:
             "bio bio bio bio bio bio"
             ".    .   .   .   .   ."
             "main main main main main main"
@@ -419,6 +533,8 @@ div.hover p {
   }
 
   .bio-profiles {
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
     font-size: 1.7em;
     height: 55px;
@@ -430,7 +546,7 @@ div.hover p {
 
   .technologies {
     width: 85%;
-    margin: 100px 0;
+    margin: 75px 0;
   }
 
   .intro h2 {
@@ -443,7 +559,7 @@ div.hover p {
   }
 
   .intro {
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
   .portfolio-page {
@@ -514,17 +630,12 @@ div.hover p {
 
 @media screen and (max-width: 320px) {
   body {
-    grid-template-areas:
-        "bio bio bio bio bio bio"
-        ".    .   .   .   .   ."
-        ".    .   .   .   .   . "
-        "main main main main main main"
-        "main main main main main main"
-        "main main main main main main"
-        "main main main main main main"
-        "main main main main main main"
-        "main main main main main main"
-        "main main main main main main";
-        font-size: 80%;
+    font-size: 80%;
+  }
+
+  main {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 7;
+    grid-row: 3/10;
   }
 }

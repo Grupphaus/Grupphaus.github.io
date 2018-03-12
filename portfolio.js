@@ -74,6 +74,7 @@ $(document).ready(function(){
         $(".bio-name").css("opacity", "1");
 
       }
+      
       // Handles brwoser resizing (kinda?)
       $(window).resize(function() {
        if ($(window).width() > 960) {
