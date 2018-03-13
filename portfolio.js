@@ -18,9 +18,47 @@ $(document).ready(function(){
   });
 
   // Project detail containers (.hover) - toggling opacity and positioning
-  $(".portfolio-page").click(function () {
-    $(".hover").toggleClass("active");
-    $(".portfolio-page").toggleClass("pressed");
+  var popshuvit = $(".popshuvit");
+  var homunculus = $(".homunculus");
+  var hawkins = $(".hawkins");
+  var karnivale = $(".karnivale");
+  var randomQuotes = $(".randomQuotes");
+  var arattel = $(".aRattel");
+  var narciso = $(".narciso");
+
+  popshuvit.on("click", function() {
+    $(".hov1").toggleClass("active");
+    popshuvit.toggleClass("pressed");
+  });
+
+  homunculus.on("click", function() {
+    $(".hov2").toggleClass("active");
+    homunculus.toggleClass("pressed");
+  });
+
+  hawkins.on("click", function() {
+    $(".hov3").toggleClass("active");
+    hawkins.toggleClass("pressed");
+  });
+
+  karnivale.on("click", function() {
+    $(".hov4").toggleClass("active");
+    karnivale.toggleClass("pressed");
+  });
+
+  randomQuotes.on("click", function() {
+    $(".hov5").toggleClass("active");
+    randomQuotes.toggleClass("pressed");
+  });
+
+  arattel.on("click", function() {
+    $(".hov6").toggleClass("active");
+    arattel.toggleClass("pressed");
+  });
+
+  narciso.on("click", function() {
+    $(".hov7").toggleClass("active");
+    narciso.toggleClass("pressed");
   });
 
   // Handles browser resizing (does it?)
