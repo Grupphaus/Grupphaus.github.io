@@ -297,9 +297,9 @@ article.proyectos {
   opacity: .9;
   -webkit-box-shadow: 5px 5px #51696d;
           box-shadow: 5px 5px #51696d;
-  -webkit-transition: all 300ms ease;
-       -o-transition: all 300ms ease;
-  transition: all 300ms ease;
+  -webkit-transition: all 200ms ease;
+       -o-transition: all 200ms ease;
+  transition: all 200ms ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,7 +315,7 @@ article.proyectos {
 
 .pressed {
   box-shadow: inset 0px 0px .8em #191919;
-  transform: scale(.99);
+  transform: scale(.99  );
 }
 
 .hover {
