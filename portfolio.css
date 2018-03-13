@@ -323,7 +323,6 @@ article.proyectos {
   height: 350px;
   width: 65%;
   position: relative;
-  right: 35%;
   opacity: 0;
   text-align: center;
   -webkit-transition: all 200ms ease;
@@ -349,7 +348,6 @@ article.proyectos {
 
 .active {
   opacity: 1;
-  right: 0;
 }
 
 .ext {
