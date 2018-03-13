@@ -45,10 +45,11 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
-  -ms-grid-rows: (1fr)[9];
-      grid-template-rows: repeat(9, 1fr);
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
       grid-template-areas:
           "bio bio nav nav nav nav"
+          "bio bio main main main main"
           "bio bio main main main main"
           "bio bio main main main main"
           "bio bio main main main main"
@@ -221,8 +222,7 @@ main {
 
 .intro {
   -ms-flex-item-align: flex-start;
-      align-self: flex-start;
-      margin-bottom: 75px;
+  align-self: flex-start;
 }
 
 .intro h2:nth-of-type(2) {
@@ -232,6 +232,7 @@ main {
 .technologies {
   font-size: 5em;
   width: 100%;
+  margin-top: 45px;
   opacity: .85;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,6 +423,7 @@ article.proyectos {
   body {
         grid-template-areas:
             "bio bio bio bio bio bio"
+            "bio bio bio bio bio bio"
             ".    .   .   .   .   ."
             "main main main main main main"
             "main main main main main main"
@@ -435,6 +437,7 @@ article.proyectos {
   }
 
   div.container-bio {
+    top: 0;
     width: 100%;
     height: 200px;
     display: -webkit-box;
@@ -476,7 +479,6 @@ article.proyectos {
   .about {
     text-align: center;
     height: 600px;
-    margin-top: 50px;
   }
 
   article.proyectos {
@@ -621,7 +623,7 @@ article.proyectos {
   }
 
   .intro {
-    margin-bottom: 35px;
+    /* margin-bottom: 35px; */
   }
 
   .intro h2 {
