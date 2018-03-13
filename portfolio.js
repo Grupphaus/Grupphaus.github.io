@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+  if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+   $("main").css("margin-top", "75px")          
+  }
+
   // Smooth scrolling
   $("a").on("click", function(event) {
 
@@ -69,7 +74,7 @@ $(document).ready(function(){
       $(".bio-profiles").css("height", "85px");
       $(".bio-name").css("opacity", "1");
     } else if ($(window).width() > 800 && $(window).width <= 960) {
-        $(".container-bio").css("height", "200px");
+        $(".container-bio").css("height", "175px");
 
     }
   });
@@ -102,7 +107,7 @@ $(document).ready(function(){
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
       } else if (scrollPos < 100 && $(window).width() <= 800 && $(window).width() > 640) {
-        $(".container-bio").css("height", "200px");
+        $(".container-bio").css("height", "175px");
         $(".bio-profiles").css("height", "75px");
         $(".bio-name").css("opacity", "1");
 
