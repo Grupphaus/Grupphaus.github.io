@@ -20,6 +20,7 @@ $(document).ready(function(){
   // Project detail containers (.hover) - toggling opacity and positioning
   $(".portfolio-page").click(function () {
     $(".hover").toggleClass("active");
+    $(".portfolio-page").toggleClass("pressed");
   });
 
   // Handles browser resizing (does it?)
@@ -27,7 +28,7 @@ $(document).ready(function(){
 
    if ($(window).width() > 960) {
       $(".container-bio").css("height", "100%");
-      $(".bio-profiles").css("height", "12%");
+      $(".bio-profiles").css("height", "85px");
       $(".bio-name").css("opacity", "1");
     } else if ($(window).width() > 800 && $(window).width <= 960) {
         $(".container-bio").css("height", "200px");
