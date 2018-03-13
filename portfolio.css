@@ -86,24 +86,33 @@ div.container-bio {
 }
 
 div.bio-photo {
-  background-image: url("notme.jpg");
+  background-image: url("me.jpg");
   height: 150px;
   width: 150px;
+  opacity: .8;
   background-size: cover;
-  margin: 10% auto;
-  margin-bottom: 5%;
+  margin: 35px auto 25px auto;
+  /* margin-bottom: 5%; */
   border-radius: 50%;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
           box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.bio-photo:hover {
+  background-image: url("me2.png");
+}
+
 .bio-name {
-  padding: 3%;
+  /* padding: 3%; */
   text-shadow: 1px 1px 0px #014467;
   font-size: 1.4em;
   -webkit-transition: opacity 200ms ease;
   -o-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
+}
+
+.bio-name h1 {
+  /* line-height: 1.45em; */
 }
 
 .bio-name span {
@@ -113,6 +122,7 @@ div.bio-photo {
 .bio-name p {
   font-size: .9em;
   opacity: .8;
+  padding-bottom: 25px;
 }
 
 .bio-profiles {
