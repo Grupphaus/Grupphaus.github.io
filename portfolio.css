@@ -37,6 +37,7 @@ img {
 }
 
 body {
+  margin: 0;
   height: 100%;
   width: 100%;
   font-size: 80%;
@@ -77,7 +78,7 @@ div.container-bio {
   position: fixed;
   background-color: #0288cf;
   color: #f6f6f6;
-  z-index: 50;
+  z-index: 6;
   -webkit-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
@@ -97,7 +98,7 @@ div.bio-photo {
 
 .bio-name {
   padding: 3%;
-  text-shadow: 1px 1px 1px #014467;
+  text-shadow: 1px 1px 0px #014467;
   font-size: 1.4em;
   -webkit-transition: opacity 200ms ease;
   -o-transition: opacity 200ms ease;
@@ -110,6 +111,7 @@ div.bio-photo {
 
 .bio-name p {
   font-size: .9em;
+  opacity: .8;
 }
 
 .bio-profiles {
@@ -120,7 +122,7 @@ div.bio-photo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 12%;
+  height: 85px;
   -webkit-box-align: center;
      -ms-flex-align: center;
         align-items: center;
@@ -162,6 +164,7 @@ nav {
   -webkit-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
+  color: #5D6063;
 }
 
 nav a {
@@ -197,18 +200,19 @@ main {
 }
 
 .about {
+  color: #5D6063;
   height: 100%;
-  margin-bottom: 25%;
-  margin-right: 25%;
+  padding: 0 10%;
+  margin-bottom: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-     -ms-flex-align: start;
-        align-items: flex-start;
-   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-    justify-content: flex-start;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+   -webkit-box-pack: center;
+      -ms-flex-pack: center;
+    justify-content: center;
      -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
      -ms-flex-direction: column;
@@ -216,12 +220,9 @@ main {
 }
 
 .intro {
-  -ms-flex-item-align: start;
+  -ms-flex-item-align: flex-start;
       align-self: flex-start;
-}
-
-.intro h2:first-of-type {
-  margin-top: 15px;
+      margin-bottom: 75px;
 }
 
 .intro h2:nth-of-type(2) {
@@ -229,20 +230,22 @@ main {
 }
 
 .technologies {
-  -ms-flex-item-align: center;
-      align-self: center;
   font-size: 5em;
-  margin: 10% 0;
-  width: 65%;
+  width: 100%;
+  opacity: .85;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-    justify-content: space-between;
+  align-self: center;
+  -ms-flex-item-align: center;
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
+      justify-content: space-around;
+}
+
+.technologies * {
+  padding: 5px;
 }
 
 .fa-html5 {
@@ -291,6 +294,7 @@ article.proyectos {
   background-repeat: no-repeat;
   background-position: center center;
   margin: 5%;
+  opacity: .9;
   -webkit-box-shadow: 5px 5px #51696d;
           box-shadow: 5px 5px #51696d;
   -webkit-transition: all 300ms ease;
@@ -325,9 +329,9 @@ article.proyectos {
   right: 35%;
   opacity: 0;
   text-align: center;
-  -webkit-transition: all 400ms ease;
-  -o-transition: all 400ms ease;
-  transition: all 400ms ease;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
   color: #fafafa;
   overflow: hidden;
   display: -webkit-box;
@@ -421,8 +425,8 @@ article.proyectos {
   body {
         grid-template-areas:
             "bio bio bio bio bio bio"
-            "bio bio bio bio bio bio"
             ".    .   .   .   .   ."
+            "main main main main main main"
             "main main main main main main"
             "main main main main main main"
             "main main main main main main"
@@ -464,16 +468,18 @@ article.proyectos {
     display: none;
   }
 
+  main {
+    margin-top: 25px;
+  }
+
   .intro {
     font-size: 1em;
   }
 
   .about {
-    margin: 3% 5% 50% 5%;
-  }
-
-  .technologies {
-    margin-top: 10%;
+    text-align: center;
+    height: 600px;
+    margin-top: 50px;
   }
 
   article.proyectos {
@@ -499,12 +505,12 @@ article.proyectos {
     bottom: 35px;
   }
 
-  .bio-profiles {
-    height: 75px;
+  .intro h2 {
+    display: none;
   }
 
-  .technologies {
-    margin-top: 15%;
+  .bio-profiles {
+    height: 75px;
   }
 
   .portfolio-page {
@@ -525,17 +531,6 @@ article.proyectos {
 
 @media screen and (max-width: 640px) {
   body {
-        grid-template-areas:
-            "bio bio bio bio bio bio"
-            ".    .   .   .   .   ."
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main"
-            "main main main main main main";
     font-size: 75%;
   }
 
@@ -556,26 +551,16 @@ article.proyectos {
     height: 55px;
   }
 
-  .about:not(.technologíes) {
-    padding-top: 0;
+  main {
+    margin-top: 0;
   }
 
-  .technologies {
-    width: 85%;
-    margin: 75px 0;
-  }
-
-  .intro h2 {
-    margin: 5px 0;
-    display: none;
+  .about {
+    height: 450px;
   }
 
   .intro p {
     font-size: 1.3em;
-  }
-
-  .intro {
-    margin-top: 5%;
   }
 
   .hover {
@@ -629,6 +614,19 @@ article.proyectos {
     height: 40px;
   }
 
+  main {
+    margin-top: 35px;
+  }
+
+  .about {
+    height: 250px;
+    margin-top: 0;
+  }
+
+  .intro {
+    margin-bottom: 35px;
+  }
+
   .intro h2 {
     display: none;
   }
@@ -637,13 +635,8 @@ article.proyectos {
     font-size: .95em;
   }
 
-  .intro p:last-child {
-    margin-bottom: 15px;
-  }
-
   .technologies {
     font-size: 3em;
-    margin: 50px 0;
     width: 100%;
   }
 
