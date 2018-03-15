@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-   $("main").css("margin-top", "110px");
+   $("main").css("margin-top", "105px");
   }
 
   // Smooth scrolling
@@ -126,11 +126,11 @@ $(document).ready(function(){
       }
 
       // Header transform on scroll position - 414px and less
-      if (scrollPos >= 75 && $(window).width() <= 414) {
+      if (scrollPos >= 50 && $(window).width() <= 414) {
         $(".container-bio").css("height", "40px");
         $(".bio-profiles").css("height", "100%");
         $(".bio-name").css("opacity", "0");
-      } else if (scrollPos < 75 && $(window).width() <= 414) {
+      } else if (scrollPos < 50 && $(window).width() <= 414) {
         $(".container-bio").css("height", "100px");
         $(".bio-profiles").css("height", "40px");
         $(".bio-name").css("opacity", "1");
