@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-   $("main").css("margin-top", "105px");
+   $("main").css("margin-top", "100px");
   }
 
   // Smooth scrolling
