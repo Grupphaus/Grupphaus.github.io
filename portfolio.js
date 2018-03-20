@@ -23,6 +23,7 @@ $(document).ready(function(){
   });
 
   // Project detail containers (.hover) - toggling opacity and positioning
+  var weatherApp = $(".weatherapp");
   var popshuvit = $(".popshuvit");
   var homunculus = $(".homunculus");
   var hawkins = $(".hawkins");
@@ -30,6 +31,11 @@ $(document).ready(function(){
   var randomQuotes = $(".randomQuotes");
   var arattel = $(".aRattel");
   var narciso = $(".narciso");
+
+  weatherApp.on("click", function() {
+    $(".hov0").toggleClass("active");
+    weatherApp.toggleClass("pressed");
+  })
 
   popshuvit.on("click", function() {
     $(".hov1").toggleClass("active");
