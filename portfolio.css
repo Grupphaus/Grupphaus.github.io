@@ -11,7 +11,11 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-h1,
+h1 {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 30px;
+}
+
 h2,
 h3 {
   font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -105,14 +109,9 @@ div.bio-photo {
 .bio-name {
   padding: 3%;
   text-shadow: 1px 1px 0px #014467;
-  font-size: 1.4em;
   -webkit-transition: opacity 200ms ease;
   -o-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
-}
-
-.bio-name h1 {
-  /* line-height: 1.45em; */
 }
 
 .bio-name span {
@@ -120,7 +119,7 @@ div.bio-photo {
 }
 
 .bio-name p {
-  font-size: .9em;
+  font-size: 1.2em;
   opacity: .8;
   padding-bottom: 25px;
 }
@@ -299,7 +298,7 @@ article.proyectos {
 }
 
 .portfolio-page {
-  height: 700px;
+  height: 84%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -391,12 +390,13 @@ article.proyectos {
   font-weight: 700;
 }
 
-.weatherapp {
-  background-image: url("weatherapp.png");
+.vug {
+  background-image: url("vug.png");
+  background-position: bottom;
 }
 
-.popshuvit {
-  background-image: url("popshuvit.png");
+.weatherapp {
+  background-image: url("weatherapp.png");
 }
 
 .aRattel {
@@ -499,10 +499,6 @@ article.proyectos {
     width: 100%;
     padding-top: 25%;
   }
-
-  .portfolio-page {
-    height: 600px;
-  }
 }
 
 @media screen and (max-width: 800px) {
@@ -528,7 +524,7 @@ article.proyectos {
   }
 
   .portfolio-page {
-    height: 425px;
+    height: 525px;
   }
 
   .hover {
@@ -587,9 +583,14 @@ article.proyectos {
     font-size: 1em;
   }
 
-  .popshuvit {
-    background-image: url("popshuvit-mobile.png");
-    background-position: top;
+  .vug {
+    background-image: url("vug-mobile.png");
+    background-position: left;
+  }
+
+  .weatherapp {
+    background-image: url("weatherapp-mobile.png");
+    background-position: center;
   }
 
   .homunculus {
@@ -613,12 +614,15 @@ article.proyectos {
     font-size: 85%;
   }
 
+  h1 {
+    font-size: 25px;
+  }
+
   div.container-bio {
     height: 100px;
   }
 
   .bio-name {
-    font-size: 1em;
     bottom: 10px;
   }
 

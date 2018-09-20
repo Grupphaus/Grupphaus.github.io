@@ -11,7 +11,7 @@ $(document).ready(function(){
       // Prevent default
       event.preventDefault();
       // hash
-      var hash = this.hash;
+      let hash = this.hash;
 
       $("html, body").animate({
         scrollTop: $(hash).offset().top
@@ -23,24 +23,24 @@ $(document).ready(function(){
   });
 
   // Project detail containers (.hover) - toggling opacity and positioning
-  var weatherApp = $(".weatherapp");
-  var popshuvit = $(".popshuvit");
-  var homunculus = $(".homunculus");
-  var hawkins = $(".hawkins");
-  var karnivale = $(".karnivale");
-  var randomQuotes = $(".randomQuotes");
-  var arattel = $(".aRattel");
-  var narciso = $(".narciso");
+  let vug = $(".vug");
+  let weatherApp = $(".weatherapp");
+  let homunculus = $(".homunculus");
+  let hawkins = $(".hawkins");
+  let karnivale = $(".karnivale");
+  let randomQuotes = $(".randomQuotes");
+  let arattel = $(".aRattel");
+  let narciso = $(".narciso");
+
+  vug.on("click", function() {
+    $(".hov0").toggleClass("active");
+    vug.toggleClass("pressed");
+  });
 
   weatherApp.on("click", function() {
-    $(".hov0").toggleClass("active");
+    $(".hov1").toggleClass("active");
     weatherApp.toggleClass("pressed");
   })
-
-  popshuvit.on("click", function() {
-    $(".hov1").toggleClass("active");
-    popshuvit.toggleClass("pressed");
-  });
 
   homunculus.on("click", function() {
     $(".hov2").toggleClass("active");
@@ -87,7 +87,7 @@ $(document).ready(function(){
 
   // Nav element highlight toggle + dynamic style changes on smaller viewports
   $(window).scroll(function() {
-    var scrollPos = $(window).scrollTop();
+    let scrollPos = $(window).scrollTop();
 
       if (scrollPos >= 500) {
         $("#proyectos").addClass("selected2");
