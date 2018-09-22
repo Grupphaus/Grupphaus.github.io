@@ -302,7 +302,7 @@ article.proyectos {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top;
   margin: 5%;
   opacity: .9;
   -webkit-box-shadow: 8px 8px #51696d;
