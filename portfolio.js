@@ -22,56 +22,6 @@ $(document).ready(function(){
     }
   });
 
-  // Project detail containers (.hover) - toggling opacity and positioning
-  let vug = $(".vug");
-  let weatherApp = $(".weatherapp");
-  let homunculus = $(".homunculus");
-  let hawkins = $(".hawkins");
-  let karnivale = $(".karnivale");
-  let randomQuotes = $(".randomQuotes");
-  let arattel = $(".aRattel");
-  let narciso = $(".narciso");
-
-  vug.on("click", function() {
-    $(".hov0").toggleClass("active");
-    vug.toggleClass("pressed");
-  });
-
-  weatherApp.on("click", function() {
-    $(".hov1").toggleClass("active");
-    weatherApp.toggleClass("pressed");
-  })
-
-  homunculus.on("click", function() {
-    $(".hov2").toggleClass("active");
-    homunculus.toggleClass("pressed");
-  });
-
-  hawkins.on("click", function() {
-    $(".hov3").toggleClass("active");
-    hawkins.toggleClass("pressed");
-  });
-
-  karnivale.on("click", function() {
-    $(".hov4").toggleClass("active");
-    karnivale.toggleClass("pressed");
-  });
-
-  randomQuotes.on("click", function() {
-    $(".hov5").toggleClass("active");
-    randomQuotes.toggleClass("pressed");
-  });
-
-  arattel.on("click", function() {
-    $(".hov6").toggleClass("active");
-    arattel.toggleClass("pressed");
-  });
-
-  narciso.on("click", function() {
-    $(".hov7").toggleClass("active");
-    narciso.toggleClass("pressed");
-  });
-
   // Handles browser resizing (does it?)
   $(window).resize(function() {
 
@@ -116,7 +66,6 @@ $(document).ready(function(){
         $(".container-bio").css("height", "175px");
         $(".bio-profiles").css("height", "75px");
         $(".bio-name").css("opacity", "1");
-
       }
 
       // Header transform on scroll position - 640px / 414px range
@@ -128,7 +77,6 @@ $(document).ready(function(){
         $(".container-bio").css("height", "130px");
         $(".bio-profiles").css("height", "55px");
         $(".bio-name").css("opacity", "1");
-
       }
 
       // Header transform on scroll position - 414px and less
@@ -140,7 +88,6 @@ $(document).ready(function(){
         $(".container-bio").css("height", "100px");
         $(".bio-profiles").css("height", "40px");
         $(".bio-name").css("opacity", "1");
-
       }
   });
 });
