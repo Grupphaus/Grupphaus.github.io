@@ -205,6 +205,10 @@ main {
   height: 100%;
 }
 
+#about-content {
+  height: 43px;
+}
+
 .about {
   color: #5D6063;
   height: 100%;
@@ -396,6 +400,10 @@ article.proyectos {
             "main main main main main main"
             "main main main main main main";
     font-size: 100%;
+  }
+  
+  #about-content {
+    height: 0px;
   }
 
   div.container-bio {
