@@ -102,10 +102,6 @@ div.bio-photo {
           box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.bio-photo:hover {
-  background-image: url("me2.png");
-}
-
 .bio-name {
   padding: 3%;
   text-shadow: 1px 1px 0px #014467;
@@ -323,11 +319,6 @@ article.proyectos {
   cursor: pointer;
 }
 
-.pressed {
-  box-shadow: inset 0px 0px .8em #191919;
-  transform: scale(.99  );
-}
-
 .hover {
   background-color: rgba(46, 46, 46, .95);
   height: 350px;
@@ -388,47 +379,6 @@ article.proyectos {
   opacity: .5;
   color: #FFD700;
   font-weight: 700;
-}
-
-.vug {
-  background-image: url("vug.png");
-  background-position: top left;
-}
-
-.weatherapp {
-  background-image: url("weatherapp.png");
-}
-
-.aRattel {
-  background-image: url("arattel-tarjeta-nodata.png");
-  background-size: contain;
-}
-
-.aRattel p, .narciso p {
-  font-size: 1.25em;
-  margin-top: 25px;
-}
-
-.homunculus {
-  background-image: url("homunc.png");
-}
-
-.hawkins {
-  background-image: url("hawkins.png");
-}
-
-.karnivale {
-  background-image: url("karnivale.png");
-}
-
-.randomQuotes {
-  background-image: url("randomquotes.png");
-}
-
-.narciso {
-  background-image: url("narciso.png");
-  background-size: contain;
-  background-color: #323232;
 }
 
 /*----- MEDIA QUERIES -----*/
@@ -575,36 +525,8 @@ article.proyectos {
     width: 70%;
   }
 
-  .aRattel h3 {
-    font-size: 1.2em;
-  }
-
   .hover p {
     font-size: 1em;
-  }
-
-  .vug {
-    background-image: url("vug-mobile.png");
-  }
-
-  .weatherapp {
-    background-image: url("weatherapp-mobile.png");
-    background-position: center;
-  }
-
-  .homunculus {
-    background-image: url("homunculus-mobile.png");
-    background-position: top;
-  }
-
-  .karnivale {
-    background-image: url("karnivale-mobile.png");
-    background-position: top;
-  }
-
-  .randomQuotes {
-    background-image: url("randomquotes-mobile.png");
-    background-position: top;
   }
 }
 
